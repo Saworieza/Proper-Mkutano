@@ -42,9 +42,9 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "Home", :anchor => "landing" %></li>
             <li><%= link_to "About", :anchor => "about" %></li>
-            <li><%= link_to "Events", :anchor => "charity" %></li>
+            <li><%= link_to "Events", :anchor => "events" %></li>
             <li><%= link_to "Archives", :anchor => "archives" %></li>
-            <li><%= link_to "Contact", :anchor => "showcase" %></li>
+            <li><%= link_to "Contact", :anchor => "footer" %></li>
             <!--
             <li><a href="index.html#intro" class="in-app">Intro</a></li>
             <li><a href="index.html#howitworks" class="in-app">How it works</a></li>
@@ -84,58 +84,6 @@
     </div>
 </div>
 
-<div id="intro" class="intro section s-white s-shadow">
-  <div class="container text-center">
-        <h1 class="page-title">Better revision. Anywhere. Anytime.</h1>
-        <p class="padded">Revision844 is the exciting new way for you to study or revise from the comfort of your computer or mobile phone.</p>
-    <p>With Revision844 you can:</p>
-    <ul class="no-discs you-can">
-      <li class="icon-li check">Select the class, subject or topic you would like to revise</li>
-      <li class="icon-li check">Access quality questions and study notes, each with informative tips to help you better understand the subject or topic</li>
-      <li class="icon-li check">Track your progress and performance</li>
-      <li class="icon-li check">Access your account via the web or the mobile app (Android and iOS)</li>
-      <li class="icon-li check">Get pointers to help you with challenging subjects or topics</li>
-    </ul>
-    </div>
-</div>
-
-<div id="about" class="pricing section s-white">
-  <div class="container text-center">
-    <h1 class="page-title padded-bottom">Features &amp; Pricing</h1>
-    <div class="row free">
-      <div class="col-sm-8 text-left features">
-        <p class="icon-li check">Free sets with revision questions and notes for the 844 syllabus</p>
-        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
-      </div>
-      <div class="col-sm-4 price">
-        <div class="caps free-price">free</div>
-      </div>
-    </div>
-    <div class="row premium">
-      <div class="col-sm-8 text-left features">
-        <p class="icon-li check">Free sets with revision questions and notes for the 844 syllabus</p>
-        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
-        <p class="icon-li check">Access to Premium revision sets</p>
-        <p class="icon-li check">Pay for the access you need: 1 Day @ KES 100; 1 Week @ KES 250; 1 Month @ KES 500; 3 Months @ KES 1,000.</p>
-
-      </div>
-      <div class="col-sm-4 price">
-        <div class="currency col-xs-4">
-          <div class="caps free-price">PREMIUM</div>
-        <p><a href="http://www.revision844.co.ke/upgrading" class="btn btn-success btn-sign open-sans-condensed btn-rounded in-app btn-upgrade"> How to Upgrade</a></p>
-        <!-- Ksh. 
-        <span class="duration">per month</span>
-        </div>
-        <div class="premium-price col-xs-8 text-left">1,000</div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div id="howitworks" class="howitworks section">
   <div class="container text-center">
     <h1 class="page-title padded-bottom">How it works</h1>
@@ -172,11 +120,57 @@
     </div>
   </div>
 </div>
-<div id="showcase" class="showcase s-black s-shadow">
+
+<div id="about" class="pricing section s-white">
+  <div class="container text-center">
+    <h1 class="page-title padded-bottom"> Our Services Include </h1>
+    <!-- ### to add check box, do class="icon-li check" to p, to remove do reverse -->
+    <div class="row free">
+      <div class="col-sm-6 text-left features">
+        <p class="icon-li check">Free sets with revision questions and notes for the 844 syllabus</p>
+        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+      </div>
+      <div class="col-sm-6 text-left features"><!-- add a class called price to make text green -->
+        <p class="icon-li check">Free sets with revision questions and notes for the 844 syllabus</p>
+        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+      </div>
+    </div>
+    <div class="row premium">
+      <div class="col-sm-6 text-left features">
+        <p class="icon-li check">Free sets with revision questions and notes for the 844 syllabus</p>
+        <p class="icon-li check">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+        <p class="icon-li check">Access to Premium revision sets</p>
+        <p class="icon-li check">Pay for the access you need: 1 Day @ KES 100; 1 Week @ KES 250; 1 Month @ KES 500; 3 Months @ KES 1,000.</p>
+
+      </div>
+      <div class="col-sm-6 price">
+        <div class="currency col-xs-4">
+          <div class="caps free-price">PREMIUM</div>
+        <p><a href="http://www.revision844.co.ke/upgrading" class="btn btn-success btn-sign open-sans-condensed btn-rounded in-app btn-upgrade"> How to Upgrade</a></p>
+        <!-- Ksh. 
+        <span class="duration">per month</span>
+        </div>
+        <div class="premium-price col-xs-8 text-left">1,000</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div id="showcase" class="showcase s-black s-shadow">
   <div class="container text-center">
     <h1 class="page-title caps">Showcase</h1>
     <div id="carousel-show" class="carousel slide padded" data-ride="carousel">
-      <!-- indicators -->
+      <!-- indicators 
       <ol class="carousel-indicators">
         <li data-target="#carousel-show" data-slide-to="1"></li>
         <li data-target="#carousel-show" data-slide-to="2"></li>
@@ -186,32 +180,32 @@
         <li data-target="#carousel-show" data-slide-to="6"></li>
         <li data-target="#carousel-show" data-slide-to="7"></li>
       </ol>
-      <!-- slides -->
+      <!-- slides 
       <div class="carousel-inner">
         <div class="item active">
           <%= image_tag("screens/mR844-login-ff2fb382f0ae410145aaa348763437ac.png", alt: "App login screen")%>
-          <!--<img alt="App login screen" src="assets/screens/mR844-login-ff2fb382f0ae410145aaa348763437ac.png" />-->
+          <!--<img alt="App login screen" src="assets/screens/mR844-login-ff2fb382f0ae410145aaa348763437ac.png" />
           <div class="carousel-caption">
             <p>App login screen</p>
           </div>
         </div>
         <div class="item">
           <%= image_tag("screens/mR844-menu-open-70d3ffc36fd38a6c97316e6a33d0b9a3.png", alt: "App classes screen")%>
-          <!--<img alt="App classes screen" src="assets/screens/mR844-menu-open-70d3ffc36fd38a6c97316e6a33d0b9a3.png" />-->
+          <!--<img alt="App classes screen" src="assets/screens/mR844-menu-open-70d3ffc36fd38a6c97316e6a33d0b9a3.png" />
           <div class="carousel-caption">
             <p>App classes screen</p>
           </div>
         </div>
         <div class="item">
           <%= image_tag("screens/mR844-subjects-4e5cd371a1eed2cec8d8e2f566222a05.png", alt: "App subjects screen")%>
-          <!--<img alt="App subjects screen" src="assets/screens/mR844-subjects-4e5cd371a1eed2cec8d8e2f566222a05.png" />-->
+          <!--<img alt="App subjects screen" src="assets/screens/mR844-subjects-4e5cd371a1eed2cec8d8e2f566222a05.png" />-
           <div class="carousel-caption">
             <p>App subjects screen</p>
           </div>
         </div>
         <div class="item">
           <%= image_tag("screens/mR844-subject-deets-0c405870520513492d24263f64f17b6a.png", alt: "App subject sets")%>
-          <!--<img alt="App subject sets" src="assets/screens/mR844-subject-deets-0c405870520513492d24263f64f17b6a.png" />-->
+          <!--<img alt="App subject sets" src="assets/screens/mR844-subject-deets-0c405870520513492d24263f64f17b6a.png" />--
           <div class="carousel-caption">
             <p>App subject sets</p>
           </div>
@@ -219,26 +213,26 @@
         <div class="item">
           <%= image_tag("screens/mR844-question-e6b9af8b10637a49675955864c9792e0.png", alt: "App question screen")%>
           <!--<img alt="App question screen" src="assets/screens/mR844-question-e6b9af8b10637a49675955864c9792e0.png" />-->
-          <div class="carousel-caption">
+          <!--<div class="carousel-caption">
             <p>App question screen</p>
           </div>
         </div>
         <div class="item">
-          <%= image_tag("screens/mR844-profile-25592ee3eba32a67adebe8965759e2a5.png", alt: "App profile screen")%>
-          <!--<img alt="App profile screen" src="assets/screens/mR844-profile-25592ee3eba32a67adebe8965759e2a5.png" />-->
+          <%#= image_tag("screens/mR844-profile-25592ee3eba32a67adebe8965759e2a5.png", alt: "App profile screen")%>
+          <!--<img alt="App profile screen" src="assets/screens/mR844-profile-25592ee3eba32a67adebe8965759e2a5.png" />--
           <div class="carousel-caption">
             <p>App profile screen</p>
           </div>
         </div>
         <div class="item">
-          <%= image_tag("screens/mR844-edit-profile-0b66de4254e6bc6530e535015089dcb2.png", alt: "App edit profile screen")%>
-          <!--<img alt="App edit profile screen" src="assets/screens/mR844-edit-profile-0b66de4254e6bc6530e535015089dcb2.png" />-->
+          <%#= image_tag("screens/mR844-edit-profile-0b66de4254e6bc6530e535015089dcb2.png", alt: "App edit profile screen")%>
+          <!--<img alt="App edit profile screen" src="assets/screens/mR844-edit-profile-0b66de4254e6bc6530e535015089dcb2.png" />--
           <div class="carousel-caption">
             <p>App edit profile screen</p>
           </div>
         </div>
       </div>
-      <!-- controls -->
+      <!-- controls --
       <a class="left carousel-control" href="index.html#carousel-show" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
@@ -247,8 +241,8 @@
       </a>
     </div>
   </div>
-</div>
-<div id="charity" class="charity section s-green">
+</div>-->
+<div id="events" class="charity section s-green" style="height: 100%;">
   <div class="container text-center ">
     <h1 class="page-title">Supporting Literacy in the Community</h1>
     <p class="padded">The Kusoma Tu Trust is a charity that supports primary school pupils that are struggling with literacy. It targets pupils who are about to complete primary school but are not able to properly read or write.</p>
@@ -343,10 +337,10 @@
     </div>
   </div>
 </div>
-<div class="footer s-black">
+<div  class="footer s-black">
   <div class="container">
     <footer>
-      <div class="row">
+      <div id="footer"class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
           <p>
             <a href="http://www.weareasilia.com" target="_blank">
