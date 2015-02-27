@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @archive.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @archive.publication_date %>
+</p>
+
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>
