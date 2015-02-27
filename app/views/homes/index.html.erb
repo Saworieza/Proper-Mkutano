@@ -71,7 +71,8 @@
 <!-- main content -->
 <div id="landing" class="landing section">
     <div class="container text-center">
-        <%= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.jpg", alt: "Logo frontpage", class: "logo")%>
+        <%#= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.jpg", alt: "Logo frontpage", class: "logo")%>
+        <%= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
         <!--<img alt="Logo frontpage" class="logo" src="assets/logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png" />-->
         <a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>
     </div>
@@ -158,17 +159,27 @@
 </div>
 
 
-
-
 <div id="events" class="charity section s-green" style="height: 100%;">
   <div class="container text-center ">
-    <h1 class="page-title">Supporting Literacy in the Community</h1>
+    <h2 class="page-title padded-bottom"> Events Calendar </h2>
+    
+
+    <div style="width:505px; text-align:center; border:1px solid brown;" >
+      <iframe  src="https://www.eventbrite.com/calendar-widget?eid=15909084500&showPrivate=1&sig=AGbIMNzCovbSlu5F0Yx1x3eEiI2AjjmQuw" frameborder="0" height="705" width="508" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true">
+      </iframe>
+
+      <div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:195px; text-align:center;" > 
+    </div>
+
+  </div>
+
+    <!--<h1 class="page-title">Supporting Literacy in the Community</h1>
     <p class="padded">The Kusoma Tu Trust is a charity that supports primary school pupils that are struggling with literacy. It targets pupils who are about to complete primary school but are not able to properly read or write.</p>
     <p class="padded-bottom">As we love reading and believe that literacy is one of the most empowering tools a child can have, we have pledged 10% of the proceeds from Revision844 to supporting the work of The Kusoma Tu Trust.</p>
     <p class="padded-bottom">Join us in supporting this great cause by donating some of your time or resources. Visit the <a class="white-link" href="http://www.kusomatutrust.org/" target="_blank">Kusoma Tu Trust’s website</a> to learn how you can do so.</p>
     <a href="http://www.kusomatutrust.org/" target="_blank">
       <%= image_tag("kusoma_tu_logo-e17ead4e4d142d02c90f601ea1892b38.png", alt: "Kusoma Tu", class: "partner-logo")%>
-      <!--<img alt="Kusoma Tu" class="partner-logo" src="assets/kusoma_tu_logo-e17ead4e4d142d02c90f601ea1892b38.png" />--></a>
+      <!--<img alt="Kusoma Tu" class="partner-logo" src="assets/kusoma_tu_logo-e17ead4e4d142d02c90f601ea1892b38.png" /></a>-->
   </div>
 </div>
 
@@ -179,7 +190,7 @@
       <div class="col-sm-5 text-left features">
         <h2 class="icon-li page-title padded-bottom"> Newsletters</h2>
         <!-- the link to below is just an experiment to see how it will look like in the future -->
-        <p class="icon-li "><%= link_to "Free sets with revision questions and notes for the 844 syllabus" %></p>
+        <p class="icon-li "><%= link_to "Free sets with revision questions and notes for the 844 syllabus", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
         <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
         <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
       </div>
