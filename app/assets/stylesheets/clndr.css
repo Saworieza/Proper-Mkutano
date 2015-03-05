@@ -35,14 +35,14 @@ h4 {
   padding: 1em;
   background: #b63642;
 }
-p {
+/*p { this kid ismaking a lot of people unhappy with crazy styling changes
   text-align: center;
   font-family: 'Droid Sans Mono';
   margin: 3em auto 1em auto;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid #414141;
-  background: #f4f4f4;
+  /*border-bottom: 2px solid #414141;
+  background: #f4f4f4;*/
 }
 .cal1 {
   margin: 30px auto;
