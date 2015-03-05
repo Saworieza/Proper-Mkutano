@@ -166,13 +166,7 @@
   <div class="container text-center ">
     <h2 class="page-title padded-bottom"> Events Calendar </h2>
     <!-- bringing in the events calendar from clndr.js steps remove done steps from the list
-      1. install container
-      2. bring in the calendar div
-      3. bring in the calendar js segment
-      4. call the css
-      5. call the js
-      6. test stuff
-      7. fix errors
+
       8. find out how to add the events section sidebar
       9. put in a few events manually
       10. test stuff
@@ -187,19 +181,30 @@
       <div class="clndr-next-button">&rsaquo;</div>
     </div>
     <div class="clndr-grid">
-      <div class="days-of-the-week">
+      <div class="days-of-the-week clearfix ">
         <%% _.each(daysOfTheWeek, function(day) { %>
           <div class="header-day"><%%= day %></div>
         <%% }); %>
-        <div class="days">
+        <div class="days clearfix ">
           <%% _.each(days, function(day) { %>
-            <div class="<%%= day.classes %>"><%%= day.day %></div>
+            <div class="<%%= day.classes %>">
+            <%%= day.day %></div>
           <%% }); %>
         </div>
       </div>
     </div>
     <div class="clndr-today-button">Today</div>
-    </script>
+
+    <div class="event-listing">
+      <div class="event-listing-title">EVENTS THIS MONTH</div>
+      <%% _.each(eventsThisMonth, function(event) { %>
+          <div class="event-item">
+            <div class="event-item-name"><%%= event.name %></div>
+            <div class="event-item-location"><%%= event.location %></div>
+          </div>
+      <%% }); %>
+    </div>
+  </script>
 
 
 
@@ -337,6 +342,8 @@
     </div>
 </form>
 </div>
+
+<!-- *************** REASEARCH AND DEVELOPMENT SECTION ********************-->
 
 <!--End mc_embed_signup-->
 </div>
