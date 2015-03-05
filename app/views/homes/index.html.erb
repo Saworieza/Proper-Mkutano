@@ -203,18 +203,18 @@
 <script type="text/template" id="clndr-template">
     <div class="clndr-controls">
       <div class="clndr-previous-button">&lsaquo;</div>
-      <div class="month"><%= month %></div>
+      <div class="month"><%%= month %></div>
       <div class="clndr-next-button">&rsaquo;</div>
     </div>
     <div class="clndr-grid">
       <div class="days-of-the-week">
-        <% _.each(daysOfTheWeek, function(day) { %>
-          <div class="header-day"><%= day %></div>
-        <% }); %>
+        <%% _.each(daysOfTheWeek, function(day) { %>
+          <div class="header-day"><%%= day %></div>
+        <%% }); %>
         <div class="days">
-          <% _.each(days, function(day) { %>
-            <div class="<%= day.classes %>"><%= day.day %></div>
-          <% }); %>
+          <%% _.each(days, function(day) { %>
+            <div class="<%%= day.classes %>"><%%= day.day %></div>
+          <%% }); %>
         </div>
       </div>
     </div>
@@ -316,7 +316,7 @@
           <p><a href="tel:0717565133">Phone Number: 0717565133</a></p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
-          <p class="footer-title caps">Asilia's products</p>
+          <p class="footer-title caps">Asilias products</p>
           <ul class="no-discs">
             <li><a href="https://www.blackwhitesimple.com/" target="_blank">Black White Simple</a></li>
             <li><a href="http://illustrateme.weareasilia.com" target="_blank">Illustrate Me</a></li>
