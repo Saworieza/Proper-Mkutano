@@ -3,5 +3,5 @@ class Event < ActiveRecord::Base
   	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   	acts_as_taggable # Alias for acts_as_taggable_on :tags
-  	acts_as_taggable_on :locations, :names
+  	# acts_as_taggable_on :locations, :names
 end
