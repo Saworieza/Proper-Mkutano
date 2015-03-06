@@ -6,40 +6,31 @@
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Better revision. Anywhere. Anytime. An exciting new way to study or revise from the comfort of your computer or mobile phone. Give your revision a boost today.">
-    <meta itemprop="name" content="Revision844"><meta itemprop="description" content="Better revision. Anywhere. Anytime. An exciting new way to study or revise from the comfort of your computer or mobile phone. Give your revision a boost today."><meta itemprop="image" content="http://www.revision844.co.ke/assets/revision844_banner.png"><meta property="og:image" content="http://www.revision844.co.ke/assets/revision844_banner.png" /><meta itemprop="url" content="http://www.revision844.co.ke">
+    <meta name="description" content="">
+    <meta itemprop="name" content="Revision844">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://www.revision844.co.ke/assets/revision844_banner.png">
+    <meta property="og:image" content="http://www.revision844.co.ke/assets/revision844_banner.png" />
+    <meta itemprop="url" content="">
     <meta name="author" content="Asilia">
-    <link href="assets/favicon-daff31422b393866941f1253d5af4769.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
   <title> Mkutano </title>
   <%= stylesheet_link_tag    'application-145ebbae97fba5f8c6e03b2e3dbe19cb', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'clndr', media: 'all', 'data-turbolinks-track' => true %>
-  <!--<link rel="stylesheet" href="styles/clndr.css">-->
-  <!--<link data-turbolinks-track="true" href="assets/application-145ebbae97fba5f8c6e03b2e3dbe19cb.css" media="all" rel="stylesheet" />-->
-<link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans:400" media="all" rel="stylesheet" />
-<link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" media="all" rel="stylesheet" />
-<%= javascript_include_tag 'application-1ae8502203dce617f805c5b6be7831ef', 'data-turbolinks-track' => true %>
 
+  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans:400" media="all" rel="stylesheet" />
+  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" media="all" rel="stylesheet" />
 
-<!--<script src="json2.js"></script>-->
+  <%= javascript_include_tag 'application-1ae8502203dce617f805c5b6be7831ef', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'json2', 'data-turbolinks-track' => true %>
-  <!--<script src="../jquery.min.js"></script>-->
   <%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
-  <!--<script src="../underscore-min.js"></script>-->
   <%= javascript_include_tag 'underscore-min', 'data-turbolinks-track' => true %>
-  <!--<script src= "moment-2.8.3.js"></script>-->
   <%= javascript_include_tag 'moment-2.8.3', 'data-turbolinks-track' => true %>
-
-  <!--<script src="../src/clndr.js"></script>-->
   <%= javascript_include_tag 'clndr', 'data-turbolinks-track' => true %>
-  <!--<script src="test.js"></script>-->
   <%= javascript_include_tag 'test', 'data-turbolinks-track' => true %>
 
   <!-- Enable live-reloading in the browser without an extension -->
   <script src="http://localhost:35729/livereload.js"></script>
 
-
-
-  <!--<script data-turbolinks-track="true" src="assets/application-1ae8502203dce617f805c5b6be7831ef.js"></script>-->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -59,9 +50,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <!--<a class="navbar-brand in-app" href="index.html#landing">-->
-          <%=link_to (image_tag("logo-white-77706a6d7edc825bd3a5f60d3b639488.png")), class: "navbar-brand in-app", anchor: "landing" %>
-          <!--<img alt="Logo white" class="logo" src="assets/logo-white-77706a6d7edc825bd3a5f60d3b639488.png" /></a>-->
+        <%=link_to (image_tag("logo-white-77706a6d7edc825bd3a5f60d3b639488.png", alt: "Logo white", class: "logo")), class: "navbar-brand in-app", anchor: "landing" %>
     </div>
     <div class="collapse navbar-collapse text-center">
           <ul class="nav navbar-nav">
@@ -81,22 +70,18 @@
 <div id="alert-success" style="display:none">
 <div class="alert alert-dismissable alert-success text-center">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    
 </div>
 </div>
 <div id="alert-danger" style="display:none">
 <div class="alert alert-dismissable alert-danger text-center">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    
 </div>
 </div><!-- /Success and Error notices -->
 
 <!-- main content -->
 <div id="landing" class="landing section">
     <div class="container text-center">
-        <%#= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.jpg", alt: "Logo frontpage", class: "logo")%>
         <%= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
-        <!--<img alt="Logo frontpage" class="logo" src="assets/logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png" />-->
         <a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>
     </div>
 </div>
@@ -113,7 +98,6 @@
         </div>
         <div class="arrow-right">
           <%= image_tag("arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png", alt: "Arrow right")%>
-          <!--<img alt="Arrow right" src="assets/arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png" />-->
         </div>
       </div>
       <div class="col-sm-4">
@@ -124,7 +108,6 @@
         </div>
         <div class="arrow-right">
           <%= image_tag("arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png", alt: "Arrow right")%>
-          <!--<img alt="Arrow right" src="assets/arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png" />-->
         </div>
       </div>
       <div class="col-sm-4">
@@ -170,7 +153,8 @@
       8. find out how to add the events section sidebar
       9. put in a few events manually
       10. test stuff
-      11.
+      11. find out how to bring in the eventbrite api
+      12. 
     -->
     <div id="api" class="cal1"></div><!--call the calendar. -->
     <!-- This is the calendar being called -->
@@ -205,9 +189,7 @@
       <%% }); %>
     </div>
   </script>
-
-
-
+  <!-- end of calendar-->
   </div>
   </div>
 </div>
@@ -256,7 +238,6 @@
   </div>
 </div>
 
-
 <div id="footer" class="getstarted section s-black">
   <div class="container">
     <footer>
@@ -294,6 +275,7 @@
 </div>
 <!-- /main content -->
 <!-- HouseKeeping -->
+
 <!--<div class="modal fade" id="partner" tabindex="-1" role="dialog" aria-labelledby="Partnership Opportunities" aria-hidden="true">
  
 </div>-->
@@ -308,7 +290,6 @@
 <form action="//mkutanotravel.us10.list-manage.com/subscribe/post?u=a15192d07e7f3fd4cbde264bd&amp;id=08895c0f8d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
   <h2>Subscribe to our mailing list</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 <div class="mc-field-group">
   <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
@@ -328,7 +309,7 @@
 
 <!--End mc_embed_signup-->
 </div>
-<!-- Google Calendar for the time being -->
+<!-- Eventbrite cal widget for the time being -->
 <div>
 
   <!-- Version 1.0.1--
