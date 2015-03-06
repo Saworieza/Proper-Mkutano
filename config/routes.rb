@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  resources :archives
-
   resources :homes
 
   # The priority is based upon order of creation: first created -> highest priority.
