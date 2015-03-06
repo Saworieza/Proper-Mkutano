@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'devise'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'acts-as-taggable-on', '~> 3.4'
 gem 'underscore-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
