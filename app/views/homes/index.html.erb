@@ -51,7 +51,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <%=link_to (image_tag("logo-white-77706a6d7edc825bd3a5f60d3b639488.png", alt: "Logo white", class: "logo")), class: "navbar-brand in-app", anchor: "landing" %>
+        <%=link_to (image_tag("logo.PNG", alt: "Logo white", class: "logo")), class: "navbar-brand in-app", anchor: "landing" %>
     </div>
     <div class="collapse navbar-collapse text-center">
           <ul class="nav navbar-nav">
@@ -83,6 +83,7 @@
 <div id="landing" class="landing section">
     <div class="container text-center">
         <%#= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
+        <%= image_tag("", class: "explore in-app bounce") %><span class="glyphicon glyphicon-chevron-down"></span>
         <!--<a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>-->
     </div>
 </div>
@@ -119,7 +120,8 @@
       </div>
       <p> ... and several other benefits such as discounted professional training and travel rates.</p>
       <p>Industry events are indeed the new way of doing business. Don’t get left behind.
-<%= link_to "Speak to us", :anchor => "footer" %> {this links to www.mkutanotravel.co.ke/contact} today to see how we can help you.</p>
+        <%= link_to "Speak to us", :anchor => "footer" %> today to see how we can help you.
+      </p>
     </div>
 
 
@@ -133,48 +135,49 @@
 <div id="events" class="charity section s-green" style="height: 100%;">
   <div class="container text-center ">
     <h2 class="page-title padded-bottom"> Events Calendar </h2>
-    <!-- bringing in the events calendar from clndr.js steps remove done steps from the list
 
-      8. find out how to add the events section sidebar
-      9. put in a few events manually
-      10. test stuff
-      11. find out how to bring in the eventbrite api
-      12. 
-    -->
-    <div id="api" class="cal1"></div><!--call the calendar. -->
-    <!-- This is the calendar being called -->
-  <script type="text/template" id="clndr-template">
-    <div class="clndr-controls">
-      <div class="clndr-previous-button">&lsaquo;</div>
-      <div class="month"><%%= month %></div>
-      <div class="clndr-next-button">&rsaquo;</div>
-    </div>
-    <div class="clndr-grid">
-      <div class="days-of-the-week clearfix ">
-        <%% _.each(daysOfTheWeek, function(day) { %>
-          <div class="header-day"><%%= day %></div>
-        <%% }); %>
-        <div class="days clearfix ">
-          <%% _.each(days, function(day) { %>
-            <div class="<%%= day.classes %>">
-            <%%= day.day %></div>
-          <%% }); %>
-        </div>
-      </div>
-    </div>
-    <div class="clndr-today-button">Today</div>
+   <table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Theme</th>
+      <th>Venue</th>
+      <th>Company</th>
+      <th>Country</th>
+      <th>Organizer</th>
+      <th>Date</th>
+      <th>Location</th>
+      <!--<th>Link</th>-->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-    <div class="event-listing">
-      <div class="event-listing-title">EVENTS THIS MONTH</div>
-      <%% _.each(eventsThisMonth, function(event) { %>
-          <div class="event-item">
-            <div class="event-item-name"><%%= event.name %></div>
-            <div class="event-item-location"><%%= event.location %></div>
-          </div>
-      <%% }); %>
-    </div>
-  </script>
-  <!-- end of calendar-->
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= image_tag event.image.url(:thumb) %></td>
+        <td><%= event.name %></td>
+        
+        <td><%= event.category %></td>
+        <td><%= event.theme %></td>
+        <td><%= event.venue %></td>
+        <td><%= event.company %></td>
+        <td><%= event.country %></td>
+
+        <td><%= event.organizer %></td>
+        <td><%= event.date %></td>
+        <td><%= event.location %></td>
+        <td><%#= event.link %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+    
   </div>
   </div>
 </div>
@@ -186,33 +189,31 @@
       Don’t miss out on our monthly newsletter. Subscribe today :
     </p>
     <div class="row free">
-      <div class="col-sm-5 text-left features">
+      <div class="col-sm-6 text-left features">
         <h2 class="icon-li page-title padded-bottom"> Newsletters</h2>
         <!-- the link to below is just an experiment to see how it will look like in the future -->
-        <p class="icon-li "><%= link_to "March 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
+        <p class="icon-li"><%= link_to "March 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
         <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
       </div>
-      <div class="col-sm-5 text-left features " style="border-right:none;">
+      <div class="col-sm-6 text-left features " style="border-right:none;">
         <h2 class="icon-li page-title padded-bottom"> Other Publications</h2>
-        <p class="icon-li ">Free sets with revision questions and notes for the 844 syllabus</p>
-        <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+        <p class="icon-li ">Other Publication One</p>
+        <p class="icon-li ">Other publication Two </p>
       </div>
       </div>
 
-    <div class="row free" >
+    <!--<div class="row free" >
       <div class="col-sm-5 text-left features">
-        <!--<div style="border:1px solid grey;">-->
+        <!--<div style="border:1px solid grey;">--
         <h3 class="icon-li page-title padded-bottom"> Our Services</h3>
-        <!-- the link to below is just an experiment to see how it will look like in the future -->
+        <!-- the link to below is just an experiment to see how it will look like in the future --
         <p class="icon-li "><%= link_to "Free sets with revision questions and notes for the 844 syllabus", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
         <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
         <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
       </div>
       <p></p>
       <div class="col-sm-5 text-left features " style="border-right:none;">
-        <!--<div style="border:1px solid grey;">-->
+        <!--<div style="border:1px solid grey;">--
         <h3 class="icon-li page-title padded-bottom"> Events Listing</h3>
         <p class="icon-li ">Free sets with revision questions and notes for the 844 syllabus</p>
         <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
@@ -220,7 +221,7 @@
         </div>
       </div>
       </div>
-    </div>
+    </div>-->
   </div>
     </div>
   </div>
@@ -239,8 +240,8 @@
         <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
           <p class="footer-title caps">We are Social</p>
           <ul class="no-discs">
-            <li class="icon-li"><a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts">Mkutano Business Travel</a></li>
-            <li class="icon-li"><a href="https://twitter.com/?lang=en">@mkutanotravel</a></li>
+            <li class="">Facebook : <a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts">Mkutano Business Travel</a></li>
+            <li class="">Twitter : <a href="https://twitter.com/?lang=en">@mkutanotravel</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
