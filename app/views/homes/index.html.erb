@@ -55,10 +55,10 @@
     </div>
     <div class="collapse navbar-collapse text-center">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>
-            <li><%= link_to "About", :anchor => "howitworks", class: "in-app" %></li>
+            <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
+            <li><%= link_to "About", :anchor => "about", class: "in-app" %></li>
             <li><%= link_to "Events", :anchor => "events", class: "in-app" %></li>
-            <li><%= link_to "Archives", :anchor => "archives", class: "in-app" %></li>
+            <li><%= link_to "Publications", :anchor => "archives", class: "in-app" %></li>
             <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
           </ul>  
     </div>
@@ -82,42 +82,18 @@
 <!-- main content -->
 <div id="landing" class="landing section">
     <div class="container text-center">
-        <%= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
+        <%#= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
         <!--<a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>-->
     </div>
 </div>
 
-<div id="howitworks" class="howitworks section">
+<div id="about" class="howitworks section">
   <div class="container text-center">
-    <h1 class="page-title padded-bottom">How it works</h1>
+    <h1 class="page-title padded-bottom">About</h1>
     <div class="row">
-      <div class="col-sm-4">
-        <div class="box-cover">
-          <div class="box">
-            Sign up for an account via the web or the mobile app. The app is available on Android and iOS.
-          </div>
-        </div>
-        <div class="arrow-right">
-          <%= image_tag("arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png", alt: "Arrow right")%>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="box-cover">
-          <div class="box">
-            Access study notes and questions by selecting your class, subject and topic.
-          </div>
-        </div>
-        <div class="arrow-right">
-          <%= image_tag("arrow-right-e2c86c7d11b625ef8deeee4ad4657bb1.png", alt: "Arrow right")%>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="box-cover">
-          <div class="box">
-            Upgrade to a premium account to gain access to the full suite of amazing study material.
-          </div>
-        </div>
-      </div>
+     <p>Mkutano Business Travel is a regional conference and events specialist.</p>
+     <p>Offering a host of services, we collaborate with you to select the most appropriate events, and further maximise the development opportunities available to you. </p>
+     <p>This gives you a greater return on your resource investment enabling you to meet your objectives and grow.</p>
     </div>
   </div>
 </div>
@@ -126,20 +102,28 @@
   <div class="container text-center">
     <h1 class="page-title padded-bottom"> Our Services Include </h1>
     <!-- ### to add check box, do class=" check" to p, to remove do reverse -->
-    <div class="row free">
+    <div class="row free" style="border-bottom:none;">
       <div class="col-sm-6 text-left features">
-        <p class="icon-li " >Free sets with revision questions and notes for the 844 syllabus</p>
-        <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
-        <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
+        <p class="icon-li check" >Event Consultation</p>
+        <p class="icon-li check">Event Ticketing, Accomodation and Travel Booking as required</p>
+        <p class="icon-li check">Event Materials</p>
+        <p class="icon-li check">Event Briefing and Itineraries
+</p>
+<p></p>
       </div>
       <div class="col-sm-6 text-left features" style="border-right:none;"><!-- add a class called price to make text green -->
-        <p class="icon-li ">Free sets with revision questions and notes for the 844 syllabus</p>
-        <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
-        <p class="icon-li " >Access to iOS and Android (mobile &amp; tablet) revision apps</p>
-        <p class="icon-li " >Access to iOS and Android (mobile &amp; tablet) revision apps</p>
+        <p class="icon-li ">To assist you in selecting the event(s) most suited to your needs</p>
+        <p class="icon-li ">To help you get competitive preferential rates</p>
+        <p class="icon-li " >To help you effectively showcase your product or service </p>
+        <p class="icon-li " >To help you know what to expect and therefore make the most of your time</p>
       </div>
+      <p> ... and several other benefits such as discounted professional training and travel rates.</p>
+      <p>Industry events are indeed the new way of doing business. Don’t get left behind.
+<%= link_to "Speak to us", :anchor => "footer" %> {this links to www.mkutanotravel.co.ke/contact} today to see how we can help you.</p>
     </div>
+
+
+
     
     </div>
   </div>
@@ -198,11 +182,14 @@
 <div id="archives" class="pricing section s-white">
   <div class="container text-center">
     <h1 class="page-title padded-bottom price "> Newsletters &amp; Publications</h1>
+    <p>
+      Don’t miss out on our monthly newsletter. Subscribe today :
+    </p>
     <div class="row free">
       <div class="col-sm-5 text-left features">
         <h2 class="icon-li page-title padded-bottom"> Newsletters</h2>
         <!-- the link to below is just an experiment to see how it will look like in the future -->
-        <p class="icon-li "><%= link_to "Free sets with revision questions and notes for the 844 syllabus", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
+        <p class="icon-li "><%= link_to "March 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c" %></p>
         <p class="icon-li ">A web revision app that is desktop, tablet and mobile-friendly</p>
         <p class="icon-li ">Access to iOS and Android (mobile &amp; tablet) revision apps</p>
       </div>
@@ -244,31 +231,21 @@
     <footer>
       <div id="footer"class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
-            <p class="footer-title caps">Asilias products</p>
-          <p class="">
-          Revision844<sup>&#153;</sup><br>Powered by <a href="http://somi.weareasilia.com" target="_blank">Somi by Asilia</a><br>&copy; 2014</p>
-          <p>
-            <a href="http://www.revision844.co.ke/privacy" target="_blank">Privacy</a> &middot; <a href="http://www.revision844.co.ke/terms" target="_blank">Terms</a>
-          </p>
-          <p><a href="mailto:hello@revision844.co.ke">Email: hello@revision844.co.ke</a></p>
-          <p><a href="tel:0717565133">Phone Number: 0717565133</a></p>
+            <p class="footer-title caps">Contact Us</p>
+            
+          <p><a href="mailto:hello@revision844.co.ke">Email: hello@mkutatanotravel.com</a></p>
+          <p><a href="tel:0717565133">Phone Number: 0717 164 504</a></p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
-          <p class="footer-title caps">Asilias products</p>
+          <p class="footer-title caps">We are Social</p>
           <ul class="no-discs">
-            <li><a href="https://www.blackwhitesimple.com/" target="_blank">Black White Simple</a></li>
-            <li><a href="http://illustrateme.weareasilia.com" target="_blank">Illustrate Me</a></li>
-            <li><a href="http://grape.weareasilia.com" target="_blank">Grape</a></li>
-            <li><a href="http://pineapple.weareasilia.com" target="_blank">Pineapple</a></li>
-            <li><a href="http://somi.weareasilia.com" target="_blank">Somi</a></li>
-            <li><a href="http://asiliaads.weareasilia.com" target="_blank">AsiliaAds</a></li>
-            <li><a href="http://weareasilia.bigcartel.com" target="_blank">Our shop</a></li>
+            <li class="icon-li"><a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts">Mkutano Business Travel</a></li>
+            <li class="icon-li"><a href="https://twitter.com/?lang=en">@mkutanotravel</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
-          <p class="footer-title caps">Partner with us</p>
-          <p>Become a partner or an affiliate<br>and enjoy benefits.</p>
-          <p class="padded"><a class="btn btn-default read-more caps open-sans-condensed" data-toggle="modal" data-target="#partner">Find out how &raquo;</a></p>
+          <p class="footer-title caps">Subscribe</p>
+          <p>Subscribe today &amp;<br> receive our monthly newsletter</p>
         </div>
       </div>
     </footer>
@@ -305,6 +282,8 @@
     </div>
 </form>
 </div>
+
+
 
 <!--End mc_embed_signup-->
 
