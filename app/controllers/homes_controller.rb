@@ -5,7 +5,7 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
-    @events = Event.all
+    @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 3)
   end
 
   # GET /homes/1

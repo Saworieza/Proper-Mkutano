@@ -3,6 +3,7 @@ gem 'devise'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
