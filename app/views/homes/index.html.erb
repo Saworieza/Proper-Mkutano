@@ -57,7 +57,7 @@
           <ul class="nav navbar-nav">
             <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
             <li><%= link_to "About", :anchor => "about", class: "in-app" %></li>
-            <li><%= link_to "Events", :anchor => "events", class: "in-app" %></li>
+            <li><%= link_to "Events", events_path class: "in-app" %></li>
             <li><%= link_to "Publications", :anchor => "archives", class: "in-app" %></li>
             <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
           </ul>  
@@ -146,7 +146,7 @@
       <th>Venue</th>
       <th>Company</th>
       <th>Country</th>
-      <th>Organizer</th>
+    
       <th>Date</th>
       <th>Location</th>
       <!--<th>Link</th>-->
@@ -166,7 +166,7 @@
         <td><%= event.company %></td>
         <td><%= event.country %></td>
 
-        <td><%= event.organizer %></td>
+        <!--<td><%= event.organizer %></td>-->
         <td><%= event.date %></td>
         <td><%= event.location %></td>
         <td><%#= event.link %></td>

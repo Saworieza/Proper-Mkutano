@@ -5,7 +5,25 @@ class EventsController < ApplicationController
   # GET /events.json
 
   def index
-    @events = Event.all.filter(params.slice(:status, :location, :starts_with))
+    #@events = Event.all.filter(params.slice(:status, :location, :starts_with))
+
+    @filterrific = initialize_filterrific(
+      Event,
+      params[:filterrific]
+    ) or return
+    
+    @events = @filterrific.find.page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+    rescue ActiveRecord::RecordNotFound => e
+      # There is an issue with the persisted param_set. Reset it.
+      puts "Had to reset filterrific params: #{ e.message }"
+      redirect_to(reset_filterrific_url(format: :html)) and return
+    end
   end
 =begin
   def index

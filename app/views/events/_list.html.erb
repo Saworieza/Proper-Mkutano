@@ -1,0 +1,27 @@
+<%# app/views/events/_list.html.erb %>
+<div id="filterrific_results">
+
+  <div>
+    <%= page_entries_info events # provided by will_paginate %>
+  </div>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Country</th>
+      <th>Date</th>
+    </tr>
+    <% events.each do |event| %>
+      <tr>
+        <td><%= link_to(event.name, event_path(event)) %></td>
+        <td><%= event.category %></td>
+        <td><%= event.country %></td>
+        <td><%= event.date %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= will_paginate events # provided by will_paginate %>
+
