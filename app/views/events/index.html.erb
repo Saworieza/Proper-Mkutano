@@ -1,3 +1,69 @@
+<head>
+
+  <!-- some code is commented because i just dont have the heart to kill them-->
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta itemprop="name" content="Revision844">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://www.revision844.co.ke/assets/revision844_banner.png">
+    <meta property="og:image" content="http://www.revision844.co.ke/assets/revision844_banner.png" />
+    <meta itemprop="url" content="">
+    <meta name="author" content="Asilia">
+    <%= favicon_link_tag 'favicon.ico' %>
+  <title> Mkutano </title>
+  <%= stylesheet_link_tag    'application-145ebbae97fba5f8c6e03b2e3dbe19cb', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'clndr', media: 'all', 'data-turbolinks-track' => true %>
+
+  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans:400" media="all" rel="stylesheet" />
+  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" media="all" rel="stylesheet" />
+
+  <%= javascript_include_tag 'application-1ae8502203dce617f805c5b6be7831ef', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'json2', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'underscore-min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'moment-2.8.3', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'clndr', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'test', 'data-turbolinks-track' => true %>
+
+  <!-- Enable live-reloading in the browser without an extension 
+  <script src="http://localhost:35729/livereload.js"></script>-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!--<meta content="authenticity_token" name="csrf-param" />
+<meta content="1085Id9jeQT0ELwlM6yOTZUuW9/k/ukMTTN7sOTX1Iw=" name="csrf-token" />-->
+</head>
+<body class="home" data-spy="scroll" data-target=".navbar-collapse">
+<!-- Navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container nav-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%=link_to (image_tag("logo.PNG", alt: "Logo white", class: "logo")), class: "navbar-brand in-app", anchor: "landing" %>
+    </div>
+    <div class="collapse navbar-collapse text-center">
+          <ul class="nav navbar-nav">
+            <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
+            <li><%= link_to "About", :anchor => "about", class: "in-app" %></li>
+            <li><%= link_to "Events", :anchor => "events", class: "in-app" %></li>
+            <li><%= link_to "Publications", :anchor => "archives", class: "in-app" %></li>
+            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
+          </ul>  
+    </div>
+  </div>
+<!--/.nav-collapse -->
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Events</h1>
