@@ -3,9 +3,18 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
+
   def index
-    @events = Event.all
+    @events = Event.all.filter(params.slice(:status, :location, :starts_with))
   end
+=begin
+  def index
+    @events = Event.where(nil) # creates an anonymous scope
+    @events = @events.status(params[:status]) if params[:status].present?
+    @events = @events.location(params[:location]) if params[:location].present?
+    @events = @events.starts_with(params[:starts_with]) if params[:starts_with].present?
+  end
+=end
 
   # GET /events/1
   # GET /events/1.json
@@ -20,6 +29,9 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
   end
+
+ 
+
 
   # POST /events
   # POST /events.json
