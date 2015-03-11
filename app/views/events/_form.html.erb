@@ -15,14 +15,15 @@
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
 
   <div class="field">
     <%= f.label :category %><br>
     <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
@@ -31,13 +32,18 @@
   </div>
 
   <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
     <%= f.label :venue %><br>
     <%= f.text_field :venue %>
   </div>
 
   <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
   </div>
 
   <div class="field">
@@ -47,21 +53,23 @@
 
 
   <div class="field">
-    <%= f.label :organizer %><br>
-    <%= f.text_field :organizer %>
+    <%# = f.label :organizer %><br>
+    <%#= f.text_field :organizer %>
   </div>
+ 
+  
+
+  <!-- not visible to public/ just to updater-->
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%#= f.label :link %><br>
+    <%#= f.text_field :link %>
   </div>
+
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%#= f.label :company %><br>
+    <%#= f.text_field :company %>
   </div>
-  <div class="field">
-    <%= f.label :link %><br>
-    <%= f.text_field :link %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

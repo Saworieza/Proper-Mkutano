@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
   <%= image_tag @event.image.url(:medium) %> 
 </p>
 
@@ -22,19 +21,19 @@
   <strong>Venue:</strong>
   <%= @event.venue %>
 </p>
-<p>
+<!--<p>
   <strong>Company:</strong>
   <%= @event.company %>
-</p>
+</p>-->
 <p>
   <strong>Country:</strong>
   <%= @event.country %>
 </p>
 
-<p>
+<!--<p>
   <strong>Organizer:</strong>
-  <%= @event.organizer %>
-</p>
+  <%#= @event.organizer %>
+</p>-->
 
 <p>
   <strong>Date:</strong>
@@ -46,10 +45,10 @@
   <%= @event.location %>
 </p>
 
-<p>
+<!--<p>
   <strong>Link:</strong>
   <%= @event.link %>
-</p>
+</p>-->
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
