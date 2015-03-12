@@ -6,10 +6,12 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 5)#y you no work?
+=begin
     @query = Event.search do
         fulltext params[:search]
     end
     @events = @query.results
+=end
   end
 
 

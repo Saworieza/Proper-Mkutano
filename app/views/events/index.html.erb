@@ -31,6 +31,12 @@
     .will_paginate{
       /*stupid thing still dowsnt work. investigate some more*/
       color:chocolate;
+      position: relative;
+      margin:0 auto;
+      margin-top: 0.5em;
+    }
+    .will_paginate, a{
+      color:chocolate;
     }
   </style>
 
@@ -145,9 +151,10 @@
           </div>
         </div><!-- /event container-->
         <% end %>
+         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
     </div>
-    <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
+    
   </div>
 
       <div id="footer" class="getstarted s-black" style="margin-top: 1em;">

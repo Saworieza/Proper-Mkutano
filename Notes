@@ -1,22 +1,27 @@
-for some weird reason all the background images are misbehaving. they cant cahnge wont change.
-find out why and fix this
-
 anytime you start this stuff please start the sunspot server by running 
 	
 rake sunspot:solr:start
 
 
 stuff that need a fixing
-the images on the home page need be changes
+the images on the home page need be changed
 on the events page get the bloody pagination to work
-get the links to work woth the events title etc
+get the links to work with the events title etc
 
 need styling
-show page to show the events in a nicer way
 include a place to place the tickets from eventsbrite
 
 
 needs to be added
 devise user
 user can crud events
+
+stuff that need a doing
+User authentication
+Event creation form one use
+create user dashboard
+
+Dumped for collection stuff
+
+, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
 
