@@ -27,6 +27,13 @@
   <%= javascript_include_tag 'clndr', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'test', 'data-turbolinks-track' => true %>
 
+  <style type="text/css">
+    .will_paginate{
+      /*stupid thing still dowsnt work. investigate some more*/
+      color:chocolate;
+    }
+  </style>
+
   <!-- Enable live-reloading in the browser without an extension 
   <script src="http://localhost:35729/livereload.js"></script>-->
 
@@ -125,22 +132,25 @@
           </div>
           <div style="overflow:hidden; padding-right: 30px; padding-left: 30px;"><!-- event details-->
             <h3 style=" color: #0086bf; font-size:20px; line-height: 30px; font-wight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= event.name %></h3><!-- event name-->
-            <p style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; margin-top: 5px; font-size: 15px; line-height: 25px;">
-             Theme: <span style="text-transform:capitalize;"><%= event.theme %></span>
+            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Theme : <span style="text-transform:capitalize; color: #cc3333;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <ul style="margin-top: 5px; list-style-type:none; padding: 0px; margin-left: 1.5em; list-style: outside none none; cursor:pointer;">
+            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Category : <span style="text-transform:capitalize; color: #cc6633;"><%= event.category %></span>
+            </p><!-- event organizer and . example Party by Homeboyz-->
+            <ul style=" list-style-type:none; padding: 0px; margin-left: 1.5em; list-style: outside none none; cursor:pointer;">
               <li style="position: relative; padding-top: px; color:#999;"> From :<%= event.date %> To: <%= event.date %> </li>
-              <li style="position: relative; padding-top: 5px; color:#999;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></li>
+              <li style="position: relative; padding-top: px; color:#999;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></li>
             </ul>
           </div>
         </div><!-- /event container-->
         <% end %>
       </div>
     </div>
-    <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0 %>
+    <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
   </div>
 
-      <div id="footer" class="getstarted s-black">
+      <div id="footer" class="getstarted s-black" style="margin-top: 1em;">
         <div class="container">
           <footer>
             <div id="footer"class="row">
