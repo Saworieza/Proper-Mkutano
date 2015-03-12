@@ -1,55 +1,78 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
+  #container{
+    width:50%;
+    margin: 0 auto;
+    box-shadow: -1px 2px 1px silver;
+  }
+  #items{
+    padding-left:2em;
+  }
+  #actions{
+    padding-bottom:1em;
+  }
+</style>
 
-<p>
-  <%= image_tag @event.image.url(:medium) %> 
-</p>
+<div id="container"><!-- overal container-->
+  <div id="items"><!--items-->
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Event Name:</strong>
-  <%= @event.name %>
-</p>
+    <p>
+    <%= image_tag @event.image.url(:medium) %> 
+    </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @event.category %>
-</p>
-<p>
-  <strong>Theme:</strong>
-  <%= @event.theme %>
-</p>
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue %>
-</p>
-<!--<p>
-  <strong>Company:</strong>
-  <%= @event.company %>
-</p>-->
-<p>
-  <strong>Country:</strong>
-  <%= @event.country %>
-</p>
+    <p>
+      <strong>Event Name:</strong>
+      <%= @event.name %>
+    </p>
 
-<!--<p>
-  <strong>Organizer:</strong>
-  <%#= @event.organizer %>
-</p>-->
+    <p>
+      <strong>Category:</strong>
+      <%= @event.category %>
+    </p>
+    <p>
+      <strong>Theme:</strong>
+      <%= @event.theme %>
+    </p>
+    <p>
+      <strong>Venue:</strong>
+      <%= @event.venue %>
+    </p>
+    <!--<p>
+      <strong>Company:</strong>
+      <%= @event.company %>
+    </p>-->
+    <p>
+      <strong>Country:</strong>
+      <%= @event.country %>
+    </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+    <!--<p>
+      <strong>Organizer:</strong>
+      <%#= @event.organizer %>
+    </p>-->
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+    <p>
+      <strong>Date:</strong>
+      <%= @event.date %>
+    </p>
 
-<!--<p>
-  <strong>Link:</strong>
-  <%= @event.link %>
-</p>-->
+    <p>
+      <strong>Location:</strong>
+      <%= @event.location %>
+    </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-<%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <!--<p>
+      <strong>Link:</strong>
+      <%= @event.link %>
+    </p>-->
+
+    <div id="actions">
+      <%= link_to 'Edit', edit_event_path(@event) %> |
+      <%= link_to 'Back', events_path %> |
+      <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' } %>
+    </div>
+  </div>
+  <div class="col-sm-4"><!-- column two to show featured event-->
+  </div>
+
+</div>
