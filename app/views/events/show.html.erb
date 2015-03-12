@@ -1,25 +1,81 @@
+<%= stylesheet_link_tag    'application-145ebbae97fba5f8c6e03b2e3dbe19cb', media: 'all', 'data-turbolinks-track' => true %>
 <style type="text/css">
   #container{
-    width:50%;
+    width:60%;
+    min-height: 310px;
     margin: 0 auto;
+    margin-top:5em;
+    margin-bottom: 1em;
     box-shadow: -1px 2px 1px silver;
   }
   #items{
     padding-left:2em;
   }
+  #image-holder{
+    background:none repeat scroll 0% 0% ;
+    visibility: visible;
+    animation-name:fadeInLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    width:300px;
+    float:left;
+    min-height: 300px !important;
+    margin-left: 20px;
+    opacity: 1;
+    margin-right:20px;
+    transform:none;
+  }
+  #content-holder{}
   #actions{
+    color:blue;
     padding-bottom:1em;
+  }
+  .actions{
+    color:chocolate ;
+  }
+  .img{
+    color:#ccc;
+    background: none repeat scroll 0% 0% ;
+    width:100%;
+    visibility: visible;
   }
 </style>
 
+<!-- Navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container nav-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%=link_to (image_tag("logo.PNG", alt: "Logo white", class: "logo")), homes_path, class: "navbar-brand in-app", anchor: "landing" %>
+    </div>
+    <div class="collapse navbar-collapse text-center">
+          <ul class="nav navbar-nav">
+            <!--<li><%= link_to "Home",homes_path, :anchor => "landing", class: "in-app" %></li>-->
+            <li><%= link_to "About",homes_path, :anchor => "about", class: "in-app" %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Publications", homes_path, :anchor => "archives", class: "in-app" %></li>
+            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
+          </ul>  
+    </div>
+  </div>
+<!--/.nav-collapse -->
+</div>
+<!-- /Navbar -->
 <div id="container"><!-- overal container-->
   <div id="items"><!--items-->
     <p id="notice"><%= notice %></p>
 
-    <p>
-    <%= image_tag @event.image.url(:medium) %> 
-    </p>
-
+    <div id="image-holder">
+      <div class="img">
+        <%= image_tag @event.image.url(:medium) %> 
+      </div>
+    </div>
+  <div id="content-holder">
     <p>
       <strong>Event Name:</strong>
       <%= @event.name %>
@@ -67,12 +123,51 @@
     </p>-->
 
     <div id="actions">
-      <%= link_to 'Edit', edit_event_path(@event) %> |
-      <%= link_to 'Back', events_path %> |
-      <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' } %>
+      <%= link_to 'Edit', edit_event_path(@event), class: "actions" %> |
+      <%= link_to 'Back', events_path, class: "actions" %> |
+      <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
     </div>
+  </div>
   </div>
   <div class="col-sm-4"><!-- column two to show featured event-->
   </div>
-
+</div>
+<div id="footer" class="getstarted section s-black">
+  <div class="container">
+    <footer>
+      <div id="footer"class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
+            <p class="footer-title caps">Contact Us</p>
+            
+          <p><a href="mailto:hello@revision844.co.ke">Email: hello@mkutatanotravel.com</a></p>
+          <p><a href="tel:0717565133">Phone Number: 0717 164 504</a></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
+          <p class="footer-title caps">We are Social</p>
+          <ul class="no-discs">
+            <li class="">Facebook : <a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts">Mkutano Business Travel</a></li>
+            <li class="">Twitter : <a href="https://twitter.com/?lang=en">@mkutanotravel</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <p class="footer-title caps">Subscribe</p>
+          <p>Subscribe today &amp;<br> receive our monthly newsletter</p>
+           <!-- new sign up form for mail chimp-->
+    <div id="mc_embed_signup_scroll" style="margin-bottom: 1em;">
+      <form id="searchbox" action="//mkutanotravel.us10.list-manage.com/subscribe/post?u=a15192d07e7f3fd4cbde264bd&amp;id=08895c0f8d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <input id="mce-EMAIL" type="email" placeholder="Enter Your Email" class="required email" style="color:black; text-align:center;" style="border-radius: 10px 0px 0px 10px;">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;">
+            <input type="text" name="b_a15192d07e7f3fd4cbde264bd_08895c0f8d" tabindex="-1" value="">
+          </div><br>
+        <input id="mc-embedded-subscribe" type="submit" value="Subscribe"name="subscribe" style="background-color: #66ff66; position: absolute; left: 2em; width: 200px; margin-top: 2px; border: 1px solid #66ff67;" >
+      </form>
+    </div>
+    <!-- /new sign up form for mailchimp-->
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
