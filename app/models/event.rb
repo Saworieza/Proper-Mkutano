@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   searchable do
-    text :category, :location, :country
+    text :category, :location, :country, :venue, :name, :theme
   end
 end
 
