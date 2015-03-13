@@ -68,6 +68,7 @@
 #cssmenu {
   padding-left:1.9em;
   padding-right: 1.5em;
+  padding-bottom:1em;
   width: ;
   font-family: Helvetica, Arial, sans-serif;
   color: #ffffff;
@@ -347,7 +348,6 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         <!-- put the guys in this section in one huge div that you style to correspond to the one in that ka thingy  of eventsbrite -->
         
         <div style="">
-          <img src="" class="g-map" style="width:250px; height:200px; padding-left:3em; ">
           <div style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:50%; margin-left: 1em; margin-top:2em;" >
             <%= form_tag events_path, :method => :get do %>
               <%= text_field_tag :search, params[:search], placeholder: '   Search ...' %>
@@ -466,7 +466,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             </section>
         <% @events.each do |event| %>
         <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px grey; font-size:15px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
-          <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; max-width: 150px; max-height:150px; margin: 0px; padding:0px; clear:both;" >
+          <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; min-width: 150px; min-height:150px; margin: 0px; padding:0px; clear:both;" >
             <div style=" display: table-cell; vertical-align:middle;">
               <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event %></div>
             </div>  
