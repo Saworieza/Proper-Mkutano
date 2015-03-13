@@ -23,5 +23,6 @@ create user dashboard
 
 Dumped for collection stuff
 
-, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
+fix the crazy switching image sizes
+
 
