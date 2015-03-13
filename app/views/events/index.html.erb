@@ -66,12 +66,15 @@
   box-sizing: border-box;
 }
 #cssmenu {
-  width: 200px;
+  padding-left:1.9em;
+  padding-right: 1.5em;
+  width: ;
   font-family: Helvetica, Arial, sans-serif;
   color: #ffffff;
 }
 #cssmenu ul ul {
   display: none;
+  z-index: 10000px;
 }
 .align-right {
   float: right;
@@ -352,92 +355,92 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <% end %>
           </div>
           <!--<input type="text" placeholder="Enter Category..." style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:66%; margin-left: 3em; margin-top:2em;" >-->
-          <div style="position: relative; box-sizing: border-nox; display; inline-block; overflow: hidden; vertical-align: top;">
+          <div style="position: relative; box-sizing: border-nox; display; inline-block; overflow: hidden; vertical-align: top; margin-top: 1em;">
             <div id='cssmenu'>
-   <ul>
-   <li class='active has-sub'><a href='#'><span>Industry</span></a>
-      <ul>
-         <li><a href='#'><span>Advertising-Marketing</span></a></li>
-         <li><a href='#'><span>Architecture</span></a></li>
-         <li><a href='#'><span>Automotive</span></a></li>
-         <li><a href='#'><span>Aviation</span></a></li>
-         <li><a href='#'><span>Banking</span></a></li>
-         <li><a href='#'><span>Beauty</span></a></li>
-         <li><a href='#'><span>Business Management</span></a></li>
-         <li><a href='#'><span>Chemicals</span></a></li>
-         <li><a href='#'><span>Cleaning</span></a></li>
-         <li><a href='#'><span>Conservation (exc Wildlife)</span></a></li>
-         <li><a href='#'><span>Construction</span></a></li>
-         <li><a href='#'><span>Education</span></a></li>
-         <li><a href='#'><span>Energy</span></a></li>
-         <li><a href='#'><span>Engineering</span></a></li>
-         <li><a href='#'><span>Entertainment</span></a></li>
-         <li><a href='#'><span>Entrepreneurship</span></a></li>
-         <li><a href='#'><span>Fashion & Accessories & Apparel</span></a></li>
-         <li><a href='#'><span>Fast Moving Cosumer Goods (FMCG)</span></a></li>
-         <li><a href='#'><span>Film & TV</span></a></li>
-         <li><a href='#'><span>Financing/span></a></li>
-         <li><a href='#'><span>Food</span></a></li>
-         <li><a href='#'><span>Food processing</span></a></li>
-         <li><a href='#'><span>Gender, Youth & Children</span></a></li>
-         <li><a href='#'><span>Government</span></a></li>
-         <li><a href='#'><span>Healthcare</span></a></li>
-         <li><a href='#'><span>Hospitality</span></a></li>
-         <li><a href='#'><span>Human Resources</span></a></li>
-         <li><a href='#'><span>Hospitality</span></a></li>
-         <li><a href='#'><span>Industry</span></a></li>
-         <li><a href='#'><span>Information Technology</span></a></li>
-         <li><a href='#'><span>Infrastructure</span></a></li>
-         <li><a href='#'><span>Insurance</span></a></li>
-         <li><a href='#'><span>Interior Design</span></a></li>
-         <li><a href='#'><span>International Development</span></a></li>
-         <li><a href='#'><span>Investment & Securities</span></a></li>
-         <li><a href='#'><span>Legal</span></a></li>
-         <li><a href='#'><span>Logistics</span></a></li>
-         <li><a href='#'><span>Manufacturing (goods)</span></a></li>
-         <li><a href='#'><span>Marine & Maritime</span></a></li>
-         <li><a href='#'><span>Marketing</span></a></li>
-         <li><a href='#'><span>Media & Communication</span></a></li>
-         <li><a href='#'><span>MICE</span></a></li>
-         <li><a href='#'><span>Mining</span></a></li>
-         <li><a href='#'><span>Music</span></a></li>
-      </ul>
-   </li>
-   <li class='active has-sub'><a href='#'><span>Location</span></a>
-      <ul>
-         <li><a href='#'><span>Product 1</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-         <li><a href='#'><span>Product 2</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li class='active has-sub'><a href='#'><span>Venue</span></a>
-      <ul>
-         <li><a href='#'><span>Product 1</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-         <li><a href='#'><span>Product 2</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   
-</ul>
-</div>
+              <ul>
+                <li class='active has-sub'><a href='#'><span>Industry</span></a>
+                    <ul>
+                      <li><a href='#'><span>Advertising-Marketing</span></a></li>
+                      <li><a href='#'><span>Architecture</span></a></li>
+                      <li><a href='#'><span>Automotive</span></a></li>
+                      <li><a href='#'><span>Aeronautical</span></a></li>
+                      <li><a href='#'><span>Aviation</span></a></li>
+                      <li><a href='#'><span>Banking</span></a></li>
+                      <li><a href='#'><span>Beauty</span></a></li>
+                      <li><a href='#'><span>Business Management</span></a></li>
+                      <li><a href='#'><span>Chemicals</span></a></li>
+                      <li><a href='#'><span>Cleaning</span></a></li>
+                      <li><a href='#'><span>Conservation (exc Wildlife)</span></a></li>
+                      <li><a href='#'><span>Construction</span></a></li>
+                      <li><a href='#'><span>Education</span></a></li>
+                      <li><a href='#'><span>Energy</span></a></li>
+                      <li><a href='#'><span>Engineering</span></a></li>
+                      <li><a href='#'><span>Entertainment</span></a></li>
+                      <li><a href='#'><span>Entrepreneurship</span></a></li>
+                      <li><a href='#'><span>Fashion & Accessories & Apparel</span></a></li>
+                      <li><a href='#'><span>Fast Moving Cosumer Goods (FMCG)</span></a></li>
+                      <li><a href='#'><span>Film & TV</span></a></li>
+                      <li><a href='#'><span>Financing/span></a></li>
+                      <li><a href='#'><span>Food</span></a></li>
+                      <li><a href='#'><span>Food processing</span></a></li>
+                      <li><a href='#'><span>Gender, Youth & Children</span></a></li>
+                      <li><a href='#'><span>Government</span></a></li>
+                      <li><a href='#'><span>Healthcare</span></a></li>
+                      <li><a href='#'><span>Hospitality</span></a></li>
+                      <li><a href='#'><span>Human Resources</span></a></li>
+                      <li><a href='#'><span>Hospitality</span></a></li>
+                      <li><a href='#'><span>Industry</span></a></li>
+                      <li><a href='#'><span>Information Technology</span></a></li>
+                      <li><a href='#'><span>Infrastructure</span></a></li>
+                      <li><a href='#'><span>Insurance</span></a></li>
+                      <li><a href='#'><span>Interior Design</span></a></li>
+                      <li><a href='#'><span>International Development</span></a></li>
+                      <li><a href='#'><span>Investment & Securities</span></a></li>
+                      <li><a href='#'><span>Legal</span></a></li>
+                      <li><a href='#'><span>Logistics</span></a></li>
+                      <li><a href='#'><span>Manufacturing (goods)</span></a></li>
+                      <li><a href='#'><span>Marine & Maritime</span></a></li>
+                      <li><a href='#'><span>Marketing</span></a></li>
+                      <li><a href='#'><span>Media & Communication</span></a></li>
+                      <li><a href='#'><span>MICE</span></a></li>
+                      <li><a href='#'><span>Mining</span></a></li>
+                      <li><a href='#'><span>Music</span></a></li>
+                                </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Location</span></a>
+                    <ul>
+                      <li><a href='#'><span>Product 1</span></a>
+                          <ul>
+                            <li><a href='#'><span>Sub Product</span></a></li>
+                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                          </ul>
+                      </li>
+                      <li><a href='#'><span>Product 2</span></a>
+                          <ul>
+                            <li><a href='#'><span>Sub Product</span></a></li>
+                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+                <li class='active has-sub'><a href='#'><span>Venue</span></a>
+                    <ul>
+                      <li><a href='#'><span>Product 1</span></a>
+                          <ul>
+                            <li><a href='#'><span>Sub Product</span></a></li>
+                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                          </ul>
+                      </li>
+                      <li><a href='#'><span>Product 2</span></a>
+                          <ul>
+                            <li><a href='#'><span>Sub Product</span></a></li>
+                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+            </div>
             <!--<div style="background-color: #fff; margin: 0 auto; padding-left:2em; padding-bottom: 5px; border-bottom:thin solid #dedede; width:60%;">
               <h3 style="border-bottom: medium none; cursor: pointer; padding-right: 20px; color: #00b6bf; text-decoration: none; font-size: 15px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">Category</h3>
             </div>
