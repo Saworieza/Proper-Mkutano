@@ -25,4 +25,5 @@ Dumped for collection stuff
 
 fix the crazy switching image sizes
 
+fix the pagination that doesnt like sunspot. use kaminari if need be
 
