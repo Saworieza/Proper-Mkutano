@@ -4,6 +4,7 @@ class Event < ActiveRecord::Base
 
 
   belongs_to :user
+  # belongs_to :industry
 
   searchable do
     text :category, :location, :country, :venue, :name, :theme

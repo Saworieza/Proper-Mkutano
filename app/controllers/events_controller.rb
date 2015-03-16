@@ -5,12 +5,17 @@ class EventsController < ApplicationController
   # GET /events.json
 
   def index
-    @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)#y you no work?
-    
-    @query = Event.search do
-        fulltext params[:search]
+    @industries = Industry.all
+    if params.has_key?("industry")
+      @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+    else
+      @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)#y you no work?
+      
+      @query = Event.search do
+          fulltext params[:search]
+      end
+      @events = @query.results
     end
-    @events = @query.results
   end
 
 

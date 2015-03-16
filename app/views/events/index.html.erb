@@ -435,10 +435,10 @@ $('#cssmenu li.has-sub>a').on('click', function(){
     <div class="collapse navbar-collapse text-center">
           <ul class="ul-nav nav navbar-nav">
             <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
-            <li><%= link_to "About", :anchor => "about" %></li>
+            <li><%= link_to "About",homes_path, :anchor => "about" %></li>
             <li><%= link_to "Events", events_path %></li>
-            <li><%= link_to "Publications", :anchor => "publications", class: "in-app" %></li>
-            <li><%= link_to "Contact", :anchor => "contact", class: "in-app" %></li>
+            <li><%= link_to "Publications",homes_path, :anchor => "publications", class: "in-app" %></li>
+            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
           </ul>  
     </div>
   </div>
@@ -479,9 +479,13 @@ $('#cssmenu li.has-sub>a').on('click', function(){
               <ul>
                 <li class='active has-sub'><a href='#'><span>Industry</span></a>
                     <ul>
-                      <li><a href='#'><span>Advertising-Marketing</span></a></li>
+                      <% @industries.each do |industry| %>
+                        <li><a href='<%= "#{events_path}?industry=#{industry.name}" %>'><span>Automotive</span></a>
+                        </li>
+                      <% end %>
+                      <li><a href='<%= "#{events_path}?industry=Advertising-Marketing" %>'><span>Advertising-Marketing</span></a></li>
                       <li><a href='#'><span>Architecture</span></a></li>
-                      <li><a href='#'><span>Automotive</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Automotive" %>'><span>Automotive</span></a></li>
                       <li> <%= link_to (find_category("Aeronautical")) %></li>
                       <!-- this is aeronautical now just find out how to link to the method and all is well-->
                       <li><a href='#'><span>Aviation</span></a></li>
