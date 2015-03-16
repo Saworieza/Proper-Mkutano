@@ -21,6 +21,10 @@ class EventsController < ApplicationController
 
   def find_category (string)
     @event = Event.find_categories(string)
+
+    Respond_to do |format|
+      format.html
+      format.js
   end
   helper_method :find_category
 
