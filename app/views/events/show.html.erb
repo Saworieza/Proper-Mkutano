@@ -39,8 +39,8 @@
     width:100%;
     visibility: visible;
   }
-    .will_paginate{
-      /*stupid thing still dowsnt work. investigate some more*/
+    /*.will_paginate{
+      stupid thing still dowsnt work. investigate some more
       color:chocolate;
       position: relative;
       margin:0 auto;
@@ -48,7 +48,7 @@
     }
     .will_paginate, a{
       color:chocolate;
-    }
+    }*/
     .footer-2{
       list-style-type: none;
       display: inline-block;
@@ -57,11 +57,73 @@
       display: inline;
       padding-left: 1.5em;
     }
+  #about{
+    background-color:white;
+  }
+  .will_paginate{
+      /*stupid thing still dowsnt work. investigate some more*/
+      color:#aed365;
+      position: relative;
+      margin:0 auto;
+      margin-top: 0.5em;
+    }
+    .footer-2{
+      list-style-type: none;
+      display: inline-block;
+    }
+    .logo{
+      padding-top:0.8em;
+    }
+    .footer-2, li{
+      display: inline;
+      padding-left: 1.5em;
+    }
+    .nav-size{
+      height:65px;
+    }
+    .ul-nav{
+      padding-left:5em;
+      padding-top:0.5em;
+      font-size: 20px;
+      font-family: garamond;
+      font-weight: bold;
+    }
+    .about-title{
+      font-family: garamond;
+      color:black;
+      font-size: 24px; 
+      text-align: center;
+    }
+    .about-text{
+      text-align: center
+      font-size:14px;
+      font-family: Corbel; /*ask to retain original font family this looks horrible*/
+      color:black;
+    }
+    .pub-title{
+      font-family: Garamond;
+      color:white;
+      font-size:24px;
+      font-weight: bold;
+    }
+    .pub-text{
+      font-family:Corbel;
+      font-size:14px;
+      font-color:white;
+      text-align: 
+    }
+    .footer-contact{
+      font-family: Corbel;
+      color:white;
+      font-size: 12px;
+      margin-top:1.3em;
+      margin-bottom: 1.3em;
+    }
 </style>
 
 <!-- Navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container nav-container">
+<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="nav-size container nav-container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -69,15 +131,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <%=link_to (image_tag("logo.PNG", alt: "Logo white", class: "logo")), homes_path, class: "navbar-brand in-app", anchor: "landing" %>
+        <%=link_to (image_tag("logo.png", alt: "Logo white", class: "logo")), homes_path, class: "logo navbar-brand in-app", anchor: "landing" %>
     </div>
     <div class="collapse navbar-collapse text-center">
-          <ul class="nav navbar-nav">
-            <!--<li><%= link_to "Home",homes_path, :anchor => "landing", class: "in-app" %></li>-->
-            <li><%= link_to "About",homes_path, :anchor => "about", class: "in-app" %></li>
+          <ul class="ul-nav nav navbar-nav">
+            <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
+            <li><%= link_to "About", :anchor => "about" %></li>
             <li><%= link_to "Events", events_path %></li>
-            <li><%= link_to "Publications", homes_path, :anchor => "archives", class: "in-app" %></li>
-            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
+            <li><%= link_to "Publications", :anchor => "publications", class: "in-app" %></li>
+            <li><%= link_to "Contact", :anchor => "contact", class: "in-app" %></li>
           </ul>  
     </div>
   </div>
@@ -141,9 +203,11 @@
     </p>-->
 
     <div id="actions">
+      <% if user_signed_in? %>
       <%= link_to 'Edit', edit_event_path(@event), class: "actions" %> |
       <%= link_to 'Back', events_path, class: "actions" %> |
       <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+      <% end %>
     </div>
   </div>
   </div>
@@ -174,21 +238,22 @@
           </footer>
         </div>
       </div>-->
-      <div id="footer" class="getstarted s-blue" style="margin-top: 1em;">
-        <div class="container">
-          <footer>
-            <div style="margin: 0 auto; width: 60%;">
-              <p>&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
-              <nav>
-                <ul class="footer-2">
-                  <li><%= link_to "About",homes_path %> </li>
-                  <li><%= link_to "Events", homes_path %></li>
-                  <li><%= link_to "Publications",homes_path %></li>
-                  <li><%= link_to "Contact ", :anchor => "footer" %></li>
-                </ul>
-              </nav>
-              <p style="margin: 0 auto; width: 60%; word-spacing: 10px; color:#00ccff;">Position | Connect | Grow</p>
-            </div>
-          </footer>
-        </div>
+<div id="footer" class="getstarted s-blue navbar-inverse" style="margin-top: 1em;">
+  <div class="container">
+    <footer>
+      <div class="footer-contact">
+        <p>&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
+        <nav>
+          <ul class="footer-2">
+            <li><%= link_to "About",homes_path %> </li>
+            <li><%= link_to "Events", homes_path %></li>
+            <li><%= link_to "Publications",homes_path %></li>
+            <li><%= link_to "Contact ", :anchor => "contact" %></li>
+          </ul>
+        </nav>
+        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
+        </p>
       </div>
+    </footer>
+  </div>
+</div>

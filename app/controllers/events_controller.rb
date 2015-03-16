@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+   before_action :authenticate_user!, except: [:index, :show]
   # GET /events
   # GET /events.json
 
@@ -19,9 +19,14 @@ class EventsController < ApplicationController
   def show
   end
 
+  def find_category (string)
+    @event = Event.find_categories(string)
+  end
+  helper_method :find_category
+
   # GET /events/new
   def new
-    @event = Event.new
+    @event = current_user.events.build
   end
 
   # GET /events/1/edit
@@ -34,7 +39,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
 
     respond_to do |format|
       if @event.save

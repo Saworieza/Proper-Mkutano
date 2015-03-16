@@ -39,8 +39,78 @@
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
   <style type="text/css">
-    .will_paginate{
-      /*stupid thing still dowsnt work. investigate some more*/
+
+  <style type="text/css">
+  #about{
+    background-color:white;
+  }
+  .home{
+    background-color:#4794b0;
+  }
+  .will_paginate{
+      /*stupid thing still doesnt work. investigate some more*/
+      color:#aed365;
+      position: relative;
+      margin:0 auto;
+      margin-top: 0.5em;
+    }
+    .footer-2{
+      list-style-type: none;
+      display: inline-block;
+    }
+    .logo{
+      padding-top:0.8em;
+    }
+    .footer-2, li{
+      display: inline;
+      padding-left: 1.5em;
+    }
+    .nav-size{
+      height:65px;
+    }
+    .ul-nav{
+      padding-left:5em;
+      padding-top:0.5em;
+      font-size: 20px;
+      font-family: garamond;
+      font-weight: bold;
+    }
+    .about-title{
+      font-family: garamond;
+      color:black;
+      font-size: 24px; 
+      text-align: center;
+    }
+    .about-text{
+      text-align: center
+      font-size:14px;
+      font-family: Corbel; /*ask to retain original font family this looks horrible*/
+      color:black;
+    }
+    .pub-title{
+      font-family: Garamond;
+      color:white;
+      font-size:24px;
+      font-weight: bold;
+    }
+    .pub-text{
+      font-family:Corbel;
+      font-size:14px;
+      font-color:white;
+      text-align: 
+    }
+    .footer-contact{
+      font-family: Corbel;
+      color:white;
+      font-size: 12px;
+      margin-top:1.3em;
+      margin-bottom: 1.3em;
+    }
+    .search{
+      width:210%;
+    }
+    /*.will_paginate{
+      stupid thing still dowsnt work. investigate some more
       color:chocolate;
       position: relative;
       margin:0 auto;
@@ -48,7 +118,7 @@
     }
     .will_paginate, a{
       color:chocolate;
-    }
+    }*/
     .footer-2{
       list-style-type: none;
       display: inline-block;
@@ -56,6 +126,39 @@
     footer-2, li{
       display: inline;
       padding-left: 1.5em;
+    }
+    .event-image{
+      height:150px;
+      width: 150px;
+      max-height: 150px !important;
+      max-width: 150px !important;
+    }
+    .new-event{
+      margin-left: 2.5em;
+      margin-bottom: 1em;
+      color: blue;
+      background-color: #ededed;
+      border-radius: 4px;
+      box-sizing: border-box;
+      display:inline-block;
+      font-size: 12px;
+      padding: 0px 10px;
+      line-height: 30px;
+      height:30px;
+      width: 10em;
+      border-left:
+      1px solid #dedede;
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-decoration:none;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing:0.5px;
+    }
+    .title-pos{
+      margin-top:1em;
+      margin-bottom: -0.3em;
     }
 
 
@@ -81,7 +184,7 @@
   padding-bottom:1em;
   width: ;
   font-family: Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  color: black;
 }
 #cssmenu ul ul {
   display: none;
@@ -314,8 +417,9 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 </head>
 <body class="home" data-spy="scroll" data-target=".navbar-collapse">
 <!-- Navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container nav-container">
+<!-- Navbar -->
+<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="nav-size container nav-container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -323,29 +427,31 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <%=link_to (image_tag("logo.PNG", alt: "Logo white", class: "logo")), homes_path, class: "navbar-brand in-app", anchor: "landing" %>
+        <%=link_to (image_tag("logo.png", alt: "Logo white", class: "logo")), homes_path, class: "logo navbar-brand in-app", anchor: "landing" %>
     </div>
     <div class="collapse navbar-collapse text-center">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "About", homes_path %></li>
-            <li><%= link_to "Events" %></li>
-            <li><%= link_to "Publications", homes_path, :anchor => "archives", class: "in-app" %></li>
-            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
+          <ul class="ul-nav nav navbar-nav">
+            <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
+            <li><%= link_to "About", :anchor => "about" %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Publications", :anchor => "publications", class: "in-app" %></li>
+            <li><%= link_to "Contact", :anchor => "contact", class: "in-app" %></li>
           </ul>  
     </div>
   </div>
 <!--/.nav-collapse -->
 </div>
+<!-- /Navbar -->
 <!-- search -->
 <!--<%= form_tag events_path, :method => :get do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search", :name => nil, :class => "button postfix" %>
 <% end %>-->
-<%= link_to 'New Event', new_event_path %><!-- make an option for this to appear when signed in on the users profile page -->
+
 
 
   
-<div class="rows">
+<div class="rows container">
 <!--search box-->
 <!--<div class="search-box wb-bottom" style="padding: 5px; overflow: hidden; border-bottom-width:2px;">
     <form>
@@ -354,13 +460,13 @@ $('#cssmenu li.has-sub>a').on('click', function(){
     </form>
 </div>-->
   <div class="row" >
-      <div class="col-sm-3 text-left features" style=" box-shadow: 1px 2px 1px #f7f7f7; margin-top: 3em; margin-right: 3em;"> 
+      <div class="col-sm-3 text-left features" style=" box-shadow: 1px 2px 0px #002; margin-top: 3em; margin-right: 3em;"> 
         <!-- put the guys in this section in one huge div that you style to correspond to the one in that ka thingy  of eventsbrite -->
         
         <div style="">
           <div style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:50%; margin-left: 1em; margin-top:2em;" >
             <%= form_tag events_path, :method => :get do %>
-              <%= text_field_tag :search, params[:search], placeholder: '   Search ...' %>
+              <%= text_field_tag :search, params[:search], placeholder: '   Search ...',class: "search" %>
               <%#= submit_tag "Search", :name => nil, :class => "button postfix" %>
             <% end %>
           </div>
@@ -373,7 +479,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <li><a href='#'><span>Advertising-Marketing</span></a></li>
                       <li><a href='#'><span>Architecture</span></a></li>
                       <li><a href='#'><span>Automotive</span></a></li>
-                      <li><a href='#'><span>Aeronautical</span></a></li>
+                      <li> <%= find_category("Aeronautical") %> <span>Aeronautical</span></li>
+                      <li> <%=  find_category("Aeronautical") %> <span>Aeronautical</span></li>
                       <li><a href='#'><span>Aviation</span></a></li>
                       <li><a href='#'><span>Banking</span></a></li>
                       <li><a href='#'><span>Beauty</span></a></li>
@@ -419,34 +526,14 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                 </li>
                 <li class='active has-sub'><a href='#'><span>Location</span></a>
                     <ul>
-                      <li><a href='#'><span>Product 1</span></a>
-                          <ul>
-                            <li><a href='#'><span>Sub Product</span></a></li>
-                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                          </ul>
-                      </li>
-                      <li><a href='#'><span>Product 2</span></a>
-                          <ul>
-                            <li><a href='#'><span>Sub Product</span></a></li>
-                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                          </ul>
-                      </li>
+                      <li><a href='#'><span>Nairobi</span></a></li>
+                      <li><a href='#'><span>Rwanda</span></a></li>
                     </ul>
                 </li>
                 <li class='active has-sub'><a href='#'><span>Venue</span></a>
                     <ul>
-                      <li><a href='#'><span>Product 1</span></a>
-                          <ul>
-                            <li><a href='#'><span>Sub Product</span></a></li>
-                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                          </ul>
-                      </li>
-                      <li><a href='#'><span>Product 2</span></a>
-                          <ul>
-                            <li><a href='#'><span>Sub Product</span></a></li>
-                            <li class='last'><a href='#'><span>Sub Product</span></a></li>
-                          </ul>
-                      </li>
+                      <li><a href='#'><span>Serena</span></a></li>
+                      <li><a href='#'><span>Hilton</span></a></li>
                     </ul>
                 </li>
               </ul>
@@ -460,39 +547,44 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <div style="background-color: #fff; margin: 0 auto; padding-left:2em; padding-bottom: 5px; border-bottom:thin solid #dedede; width:60%;">
               <h3 style="border-bottom: medium none; cursor: pointer; padding-right: 20px; color: #00b6bf; text-decoration: none; font-size: 15px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">Date</h3>
             </div>-->
+            <% if user_signed_in? %>
+            <%= link_to 'New Event', new_event_path, class: "new-event" %><!-- make an option for this to appear when signed in on the users profile page -->
+            <% end %>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-8 text-left features free" style="box-shadow: 1px 2px 0px 0px #f7f7f7;" >
-        <h2 class=" page-title padded-bottom "> Events</h2>
+      <div class="col-sm-8 text-left features free title-pos" style="box-shadow: 1px 2px 0px 0px #002;" >
+        <h2 class=" page-title padded-bottom title-pos "> Events</h2>
         <section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
-                <li href="" style="padding-right: -20px;  color: #666; background-color: #ededed; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
+                <li href="" style="padding-right: -20px;  color: #666; background-color: #ffe; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
                     date
                 </li>
-                <li href="" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-right: 1px solid #dedede; border-box; display:inline-block; font-size: 12px; padding: 0px 20px; background-color: #ff;line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; color: #0086bf; text-transform: uppercase;text-align: right; letter-spacing:0.5px;">
+                <li href="" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-right: 1px solid #dedede; border-box; display:inline-block; font-size: 12px; padding: 0px 20px; background-color: #ededed;line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; color: #0086bf; text-transform: uppercase;text-align: right; letter-spacing:0.5px;">
                     location
                 </li>
             </section>
         <% @events.each do |event| %>
-        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px grey; font-size:15px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
+        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:15px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
           <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; min-width: 150px; min-height:150px; margin: 0px; padding:0px; clear:both;" >
             <div style=" display: table-cell; vertical-align:middle;">
-              <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event %></div>
+              <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event, class: "event-image"%></div>
             </div>  
           </div>
           <div style="overflow:hidden; padding-right: 30px; padding-left: 30px;"><!-- event details-->
-            <h3 style=" color: #0086bf; font-size:20px; line-height: 30px; font-wight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= event.name %></h3><!-- event name-->
+            <h3 style=" color: #0086bf; font-size:20px; line-height: 30px; font-wight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
             <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
              Theme : <span style="text-transform:capitalize; color: #cc3333;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
             <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
              Industry: <span style="text-transform:capitalize; color: #cc6633;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <ul style=" list-style-type:none; padding: 0px; margin-left: 1.5em; list-style: outside none none; cursor:pointer;">
-              <li style="position: relative; padding-top: px; color:#999;"> From :<%= event.date %> To: <%= event.date %> </li><br>
-              <li style="position: relative; padding-top: px; color:#999;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></li>
-            </ul>
+            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Dates : <span style="text-transform:capitalize; color: #cc3333;"><%= event.date %> To: <%= event.date %></span>
+            </p>
+            <p style="margin-bottom:1em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Venue : <span style="text-transform:capitalize; color: #cc3333;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
+            </p>
           </div>
         </div><!-- /event container-->
         <% end %>
@@ -526,24 +618,25 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           </footer>
         </div>
       </div>-->
-      <div id="footer" class="getstarted s-blue" style="margin-top: 1em;">
-        <div class="container">
-          <footer>
-            <div style="margin: 0 auto; width: 60%;">
-              <p>&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
-              <nav>
-                <ul class="footer-2">
-                  <li><%= link_to "About",homes_path %> </li>
-                  <li><%= link_to "Events", homes_path %></li>
-                  <li><%= link_to "Publications",homes_path %></li>
-                  <li><%= link_to "Contact ", :anchor => "footer" %></li>
-                </ul>
-              </nav>
-              <p style="margin: 0 auto; width: 60%; word-spacing: 10px; color:#00ccff;">Position | Connect | Grow</p>
-            </div>
-          </footer>
-        </div>
+<div id="footer" class="getstarted s-blue navbar-inverse" style="margin-top: 1em;">
+  <div class="container">
+    <footer>
+      <div class="footer-contact">
+        <p>&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
+        <nav>
+          <ul class="footer-2">
+            <li><%= link_to "About",homes_path %> </li>
+            <li><%= link_to "Events", homes_path %></li>
+            <li><%= link_to "Publications",homes_path %></li>
+            <li><%= link_to "Contact ", :anchor => "contact" %></li>
+          </ul>
+        </nav>
+        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
+        </p>
       </div>
+    </footer>
+  </div>
+</div>
 
 
 <!-- ££££££££££££££££ AREA 51 ££££££££££££££££££££-->

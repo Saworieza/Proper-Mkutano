@@ -1,14 +1,23 @@
 anytime you start this stuff please start the sunspot server by running 
 	
 rake sunspot:solr:start
-fixed the bloody image file from that css but problem is. i dont know where it is located now... so id stay we are safe .. albeit temporarily
+
 
 stuff that need a fixing
-the images on the home page need be changed
+fix the footer position for all pages
+fix the link routes on the nav for events and show
 on the events page get the bloody pagination to work
-get the links to work with the events title etc
-fix the crazy switching image sizes
 fix the pagination that doesnt like sunspot. use kaminari if need be
+
+fixed stuff and how
+fix the crazy switching image sizes (Temporary fix by adding a margin of 1em to the bottom item)
+get the links to work with the events title etc(fixed. turns out the links are white in bootstrap mother node. need to change that. by default mine are brown but that will be changed)
+fixed the bloody image file from that css but problem is. i dont know where it is located now... so id stay we are safe .. albeit temporarily
+the images on the home page need be changed - changed after our app css started working
+
+here is an idea. insted of creating a tag cloud make the cloud populate the list on the industry drop down and thus problem solved. tags as usual are sparated by commas
+
+
 
 need styling
 include a place to place the tickets from eventsbrite
@@ -26,21 +35,8 @@ create user dashboard
 routing as the lady requires
 
 Dumped for collection stuff
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 
 
-
+Notes on Following latest design docs
+choice of font family and color is thoroughly questionable. stuff looks horrible therefore i am inline styling them on the page so that if need be i just remove their classes and they revert to defaults
+event [age background: white or white smoke. for the client prefered color, horrible
