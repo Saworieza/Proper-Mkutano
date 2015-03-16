@@ -85,17 +85,18 @@
     }
     .pub-title{
       font-family: Garamond;
-      color:white;
+      color:#2a6496;/* changed this as the background-color is too white*/
       font-size:24px;
       font-weight: bold;
     }
     .pub-text{
+      color: black;
       font-family:Corbel;
       font-size:14px;
-      font-color:white;
       text-align: 
     }
     .footer-contact{
+      text-align: center;
       font-family: Corbel;
       color:white;
       font-size: 12px;
@@ -171,20 +172,20 @@
     <!-- ### to add check box, do class=" check" to p, to remove do reverse -->
     <div class="row free" style="border-bottom:none;">
       <div class="col-sm-6 text-left features">
-        <p class="icon-li check" >Event Consultation</p>
-        <p class="icon-li check">Event Ticketing, Accomodation and Travel Booking as required</p>
-        <p class="icon-li check">Event Materials</p>
-        <p class="icon-li check">Event Briefing and Itineraries</p>
+        <p class="about-text icon-li check" >Event Consultation</p>
+        <p class="about-text icon-li check">Event Ticketing, Accomodation and Travel Booking as required</p>
+        <p class="about-text icon-li check">Event Materials</p>
+        <p class="about-text icon-li check">Event Briefing and Itineraries</p>
         <p></p>
       </div>
       <div class="col-sm-6 text-left features" style="border-right:none;"><!-- add a class called price to make text green -->
-        <p class="icon-li ">To assist you in selecting the event(s) most suited to your needs</p>
-        <p class="icon-li ">To help you get competitive preferential rates</p>
-        <p class="icon-li " >To help you effectively showcase your product or service </p>
-        <p class="icon-li " >To help you know what to expect and therefore make the most of your time</p>
+        <p class="about-text icon-li ">To assist you in selecting the event(s) most suited to your needs</p>
+        <p class="about-text icon-li ">To help you get competitive preferential rates</p>
+        <p class="about-text icon-li " >To help you effectively showcase your product or service </p>
+        <p class="about-text icon-li " >To help you know what to expect and therefore make the most of your time</p>
       </div>
-      <p> ... and several other benefits such as discounted professional training and travel rates.</p>
-      <p>Industry events are indeed the new way of doing business. Don’t get left behind.
+      <p class="about-text"> ... and several other benefits such as discounted professional training and travel rates.</p>
+      <p class="about-text" >Industry events are indeed the new way of doing business. Don’t get left behind.
         <%= link_to "Speak to us", :anchor => "footer" %> today to see how we can help you.
       </p>
     </div>
@@ -208,7 +209,7 @@
           <div style="position: absolute; left: -5000px;">
             <input type="text" name="b_a15192d07e7f3fd4cbde264bd_08895c0f8d" tabindex="-1" value="">
           </div>
-        <input id="mc-embedded-subscribe" type="submit" value="Subscribe"name="subscribe" class="pub-text"style="background-color: #66ff66; border: 1px solid #66ff67; border-radius: 5px; font-weight:bold;" >
+        <input id="mc-embedded-subscribe" type="submit" value="Subscribe"name="subscribe" class="pub-text"style="background-color: #66ff66; border: 2px solid #aed365; border-radius: 5px; font-weight:bold;" >
       </form>
     </div>
     <div class="row free">

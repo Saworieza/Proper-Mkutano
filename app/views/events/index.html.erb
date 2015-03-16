@@ -100,6 +100,7 @@
       text-align: 
     }
     .footer-contact{
+      text-align: center;
       font-family: Corbel;
       color:white;
       font-size: 12px;
@@ -122,8 +123,10 @@
     .footer-2{
       list-style-type: none;
       display: inline-block;
+      padding-top:1em;
+      padding-bottom:1em;
     }
-    footer-2, li{
+    .footer-2, li{
       display: inline;
       padding-left: 1.5em;
     }
@@ -337,7 +340,7 @@
   </style>
 
 <!-- script for the dropdown -->
-  <script type="text/javascript">
+<script type="text/javascript">
     ( function( $ ) {
 $( document ).ready(function() {
 $('#cssmenu li.has-sub>a').on('click', function(){
@@ -479,8 +482,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <li><a href='#'><span>Advertising-Marketing</span></a></li>
                       <li><a href='#'><span>Architecture</span></a></li>
                       <li><a href='#'><span>Automotive</span></a></li>
-                      <li> <%= find_category("Aeronautical") %> <span>Aeronautical</span></li>
-                      <li> <%=  find_category("Aeronautical") %> <span>Aeronautical</span></li>
+                      <li> <%= link_to (find_category("Aeronautical")) %></li>
+                      <!-- this is aeronautical now just find out how to link to the method and all is well-->
                       <li><a href='#'><span>Aviation</span></a></li>
                       <li><a href='#'><span>Banking</span></a></li>
                       <li><a href='#'><span>Beauty</span></a></li>
@@ -631,7 +634,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <li><%= link_to "Contact ", :anchor => "contact" %></li>
           </ul>
         </nav>
-        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
+        <p class="" style="margin: 0 auto; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
         </p>
       </div>
     </footer>
@@ -640,6 +643,9 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 
 
 <!-- ££££££££££££££££ AREA 51 ££££££££££££££££££££-->
-
+<%# @events.each do |event| %>
+ <%#= select("event", "category", Event::CATEGORIES, {include_blank: true}) %>
+<%# end %>
+<%#= select("event[]", "category", %w[rap rock country], {}, { index: nil }) %>
           
 
