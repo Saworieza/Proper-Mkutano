@@ -1,28 +1,24 @@
 
 <style type="text/css">
   #container{
-    width:60%;
-    min-height: 310px;
-    margin: 0 auto;
-    margin-top:5em;
     margin-bottom: 1em;
-    box-shadow: -1px 2px 1px silver;
+    /*box-shadow: -1px 1px 1px black;*/
   }
   #items{
     padding-left:2em;
+    margin-top:1em;
   }
   #image-holder{
     background:none repeat scroll 0% 0% ;
     visibility: visible;
-    animation-name:fadeInLeft;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    padding-top:1em;
+    padding-bottom:0.5em;
     width:300px;
     float:left;
     min-height: 300px !important;
     margin-left: 20px;
     opacity: 1;
-    margin-right:20px;
+    margin-right:3em;
     transform:none;
   }
   #content-holder{}
@@ -33,7 +29,12 @@
   .actions{
     color:chocolate ;
   }
+  .content-p{
+    padding-top:0.8em;
+  }
   .img{
+    border:thin solid black;
+    border-radius:2px;
     color:#ccc;
     background: none repeat scroll 0% 0% ;
     width:100%;
@@ -42,7 +43,7 @@
 </style>
 </div>
 <!-- /Navbar -->
-<div id="containe" class="container"><!-- overal container-->
+<div id="container" class="container rows"><!-- overal container-->
   <div id="items"><!--items-->
     <p id="notice"><%= notice %></p>
 
@@ -58,7 +59,7 @@
     </p>-->
 
 
-    <p>
+    <p class="content-p">
       <strong>Event Name:</strong>
       <%= @event.name %>
     </p>
