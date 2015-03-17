@@ -16,7 +16,7 @@ class EventsController < ApplicationController
       @query = Event.search do
           fulltext params[:search]
       end
-      @events = @query.results
+      @events = Event.where(id: @query.results.map(&:id)).paginate(page: params[:page], per_page: 3)
     end
   end
 

@@ -10,14 +10,14 @@ background color events page
 
 stuff that need a fixing
 on the events page get the bloody pagination to work
-okay, pagination works for search. now to make it work for the remaining idiots
-fix the pagination that doesnt like sunspot. use kaminari if need be
+
 
 fixed stuff and how
 fix the crazy switching image sizes (Temporary fix by adding a margin of 1em to the bottom item)
 get the links to work with the events title etc(fixed. turns out the links are white in bootstrap mother node. need to change that.)
 fixed the bloody image file from that css 
 the images on the home page need be changed - changed after our app css started working
+okay, pagination works for search. now to make it work for the remaining idiots. fixed it by get the results from solr then search your model by ids that solr returned and paginate them, 
 
 
 
