@@ -32,9 +32,9 @@ class EventsController < ApplicationController
   helper_method :find_category
 
   def find_location (string)
-    @event = Event.find_locations(string)
+    @event = Event.find_countries(string)
   end
-  helper_method :find_location
+  helper_method :find_country
 
   # GET /events/new
   def new

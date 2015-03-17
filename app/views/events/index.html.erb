@@ -49,7 +49,7 @@
       padding: 0px 10px;
       line-height: 30px;
       height:30px;
-      width: 13.6em;
+      width: 10.6em;
       border-left:
       1px solid #dedede;
       border-top: 1px solid #dedede;
@@ -59,6 +59,7 @@
       font-weight: 600;
       text-align: center;
       letter-spacing:0.5px;
+      font-family: Corbel;
     }
     .title-pos{
       margin-top:1em;
@@ -77,6 +78,7 @@
   list-style: none;
   line-height: 1;
   display: block;
+  font-family: Corbel;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -184,9 +186,10 @@
   padding: 10px 20px;
   z-index: 1;
   text-decoration: none;
-  font-size: 13px;
-  color: #eeeeee;
-  background: #49505a;
+  font-size: 14px;
+  font-family: Corbel;
+  color: #000;
+  background: #fff;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 #cssmenu ul ul li:hover > a,
@@ -323,7 +326,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 <body>  
 <div class="home rows container">
   <div class="row" >
-      <div class="col-sm-3 text-left features" style=" box-shadow: 1px 0px 0px #002; margin-top: 3em; margin-right: 3em;"> 
+      <div class="col-sm-3 text-left features" style=" margin-top: 3em; margin-right: 3em;"> 
         <!-- put the guys in this section in one huge div that you style to correspond to the one in that ka thingy  of eventsbrite -->
         
         <div style="">
@@ -336,6 +339,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           <div style="position: relative; box-sizing: border-nox; display; inline-block; overflow: hidden; vertical-align: top; margin-top: 1em;">
             <div id='cssmenu'>
               <ul>
+                <li class='active'><%= link_to "All", events_path %></li>
                 <li class='active has-sub'><a href='#'><span>Industry</span></a>
                     <ul>
                       <!-- if you link industry name to this twill save you a whole lotsa trouble
@@ -345,7 +349,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <% end %>-->
 
 
-                      <li><a href='<%= "#{events_path}?industry=Agriculture" %>'><span>Agriculture</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Agric & Forestry" %>'><span>Agric & Forestry</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Assembly" %>'><span>Assembly</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Beauty" %>'><span>Beauty</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Conservation" %>'><span>Conservation</span></a></li>
@@ -376,16 +380,19 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <li><a href='<%= "#{events_path}?industry=Tourism" %>'><span>Tourism</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Trade" %>'><span>Trade</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Travel" %>'><span>Travel</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Veterinary" %>'><span>Veterinary</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Well-being" %>'><span>Well-being</span></a></li>
                     </ul>
                 </li>
-                <li class='active has-sub'><a href='#'><span>Location</span></a>
+                <li class='active has-sub'><a href='#'><span>Country</span></a>
                     <ul>
-                      <li><a href='<%= "#{events_path}?location=Nairobi" %>'><span>Nairobi</span></a></li>
-                      <li><a href='<%= "#{events_path}?location=Mombasa" %>'><span>Mombasa</span></a></li>
-                      <li><a href='<%= "#{events_path}?location=Kisumu" %>'><span>Kisumu</span></a></li>
-                      <li><a href='<%= "#{events_path}?location=Kigali" %>'><span>Kigali</span></a></li>
-                      <li><a href='<%= "#{events_path}?location=Kampala" %>'><span>Kampala</span></a></li>
+                      <li><a href='<%= "#{events_path}?country=Kenya" %>'><span>Kenya</span></a></li>
+                      <li><a href='<%= "#{events_path}?country=Ethiopia" %>'><span>Ethiopia</span></a></li>
+                      <li><a href='<%= "#{events_path}?country=Tanzania" %>'><span>Tanzania</span></a></li>
+                      <li><a href='<%= "#{events_path}?country=Uganda" %>'><span>Uganda</span></a></li>
+                      <li><a href='<%= "#{events_path}?country=Rwanda" %>'><span>Rwanda</span></a></li>
+                       <li><a href='<%= "#{events_path}?country=Burundi" %>'><span>Burundi</span></a></li>
+                       <li><a href='<%= "#{events_path}?country=Sudan" %>'><span>Sudan</span></a></li>
                     </ul>
                 </li>
                 <!--<li class='active has-sub'><a href='#'><span>Venue</span></a>
@@ -403,7 +410,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         </div>
       </div>
 
-      <div class="col-sm-8 text-left features free title-pos" style="box-shadow: 1px 2px 0px 0px #002;" >
+      <div class="col-sm-8 text-left features free title-pos"  >
         <h2 class=" page-title padded-bottom title-pos "> Events</h2>
         <!--<section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
                 <li href="" style="padding-right: -20px;  color: #666; background-color: #ffe; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
@@ -421,18 +428,18 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             </div>  
           </div>
           <div style="overflow:hidden; padding-right: 30px; padding-left: 30px;"><!-- event details-->
-            <h3 style=" color: #0086bf; font-size:20px; line-height: 30px; font-wight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
-            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
-             Theme : <span style="text-transform:capitalize; color: #000;"><%= event.theme %></span>
+            <h3 style=" color: #0086bf; font-size:20px; font-family: Corbel; line-height: 30px; font-weight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
+            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; font-family: Corbel; line-height: 25px; color: #180000;">
+             Theme : <span style="text-transform:capitalize; font-family: Corbel; color: #000;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
-             Industry: <span style="text-transform:capitalize; color: #000;"><%= event.category %></span>
+            <p style=" font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Industry: <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+            <p style="font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
              Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> To: <%= event.date %></span>
             </p>
-            <p style="margin-bottom:1em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
-             Venue : <span style="text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
+            <p style="font-family: Corbel; margin-bottom:1em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+             Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>
           </div>
         </div><!-- /event container-->

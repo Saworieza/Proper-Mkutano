@@ -16,8 +16,8 @@ class Event < ActiveRecord::Base
   	return found_event = Event.find_by_category(string)
   end
 
-  def Event.find_locations(string)
-    return found_event = Event.find_by_location(string)
+  def Event.find_countries(string)
+    return found_event = Event.find_by_country(string)
   end
 
 

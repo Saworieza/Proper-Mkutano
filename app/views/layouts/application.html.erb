@@ -83,7 +83,7 @@
     }
     .pub-title{
       font-family: Garamond;
-      color:#2a6496;/* changed this as the background-color is too white*/
+      color:black;/* changed this as the background-color is too white*/
       font-size:24px;
       font-weight: bold;
     }
@@ -102,10 +102,15 @@
       margin-bottom: 1.3em;
     }
     .foot-contact{
-      text-align: center;
+      margin:0 auto;
+      width:50%;
+      text-align: left;
       padding-left: 0;
       font-family: Corbel;
-      font-size: 12px;
+      font-size: 14px;
+    }
+    .footer-cont{
+      margin-left:8em;
     }
 </style>
 </head>
@@ -156,13 +161,13 @@
         <p class="footer-m">&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
         <nav>
           <ul class="footer-2">
-            <li><%= link_to "About",homes_path %> </li>
-            <li><%= link_to "Events", homes_path %></li>
-            <li><%= link_to "Publications",homes_path %></li>
+            <li><%= link_to "About", :anchor => "about" %> </li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Publications", :anchor => "publications" %></li>
             <li><%= link_to "Contact ", :anchor => "contact" %></li>
           </ul>
         </nav>
-        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
+        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#fff;">      Position | Connect | Grow
         </p>
       </div>
     </footer>
