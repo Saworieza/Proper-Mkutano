@@ -2,20 +2,22 @@ anytime you start this stuff please start the sunspot server by running
 	
 rake sunspot:solr:start
 
+styling fixes
+margin top from stuff under the nav
+background image positioning for the home page images
+background color events page 	
+
 
 stuff that need a fixing
-fix the footer position for all pages
-fix the link routes on the nav for events and show
 on the events page get the bloody pagination to work
+okay, pagination works for search. now to make it work for the remaining idiots
 fix the pagination that doesnt like sunspot. use kaminari if need be
 
 fixed stuff and how
 fix the crazy switching image sizes (Temporary fix by adding a margin of 1em to the bottom item)
-get the links to work with the events title etc(fixed. turns out the links are white in bootstrap mother node. need to change that. by default mine are brown but that will be changed)
-fixed the bloody image file from that css but problem is. i dont know where it is located now... so id stay we are safe .. albeit temporarily
+get the links to work with the events title etc(fixed. turns out the links are white in bootstrap mother node. need to change that.)
+fixed the bloody image file from that css 
 the images on the home page need be changed - changed after our app css started working
-
-here is an idea. insted of creating a tag cloud make the cloud populate the list on the industry drop down and thus problem solved. tags as usual are sparated by commas
 
 
 
@@ -24,8 +26,9 @@ include a place to place the tickets from eventsbrite
 
 
 needs to be added
-devise user
-user can crud events
+favicon
+
+
 
 stuff that need a doing
 User authentication

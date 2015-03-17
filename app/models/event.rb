@@ -4,16 +4,20 @@ class Event < ActiveRecord::Base
 
 
   belongs_to :user
-  # belongs_to :industry
+  
+  #relationship for industry name and event
+   belongs_to :industry
 
   searchable do
     text :category, :location, :country, :venue, :name, :theme
   end
 
   def Event.find_categories(string)
-  	# return nil if self.category.nil?
-  	#return category if Event.has
   	return found_event = Event.find_by_category(string)
+  end
+
+  def Event.find_locations(string)
+    return found_event = Event.find_by_location(string)
   end
 
 
@@ -21,3 +25,4 @@ end
 #case insensitivity
 
 
+# rails g migration add_industry_to_event industry:references

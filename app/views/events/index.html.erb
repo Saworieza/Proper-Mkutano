@@ -1,134 +1,34 @@
 <head>
-
   <!-- some code is commented because i just dont have the heart to kill them-->
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta itemprop="name" content="Revision844">
+    <meta itemprop="name" content="Mkutano Travel">
     <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://www.revision844.co.ke/assets/revision844_banner.png">
-    <meta property="og:image" content="http://www.revision844.co.ke/assets/revision844_banner.png" />
+    <meta itemprop="image" content="http://mkutanotravel.co.ke/assets/revision844_banner.png">
+    <meta property="og:image" content="http://mkutanotravel.co.ke/assets/revision844_banner.png" />
     <meta itemprop="url" content="">
-    <meta name="author" content="Asilia">
+    <meta name="author" content="HabaHaba">
     <%= favicon_link_tag 'favicon.ico' %>
+
   <title> Mkutano </title>
-  <%= stylesheet_link_tag    'application-145ebbae97fba5f8c6e03b2e3dbe19cb', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'clndr', media: 'all', 'data-turbolinks-track' => true %>
-
-  <%= stylesheet_link_tag    'reset', media: 'all', 'data-turbolinks-track' => true %>
-  <!--<%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>-->
-
-  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans:400" media="all" rel="stylesheet" />
-  <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" media="all" rel="stylesheet" />
-
-  <%= javascript_include_tag 'application-1ae8502203dce617f805c5b6be7831ef', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'json2', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'underscore-min', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'moment-2.8.3', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'clndr', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'test', 'data-turbolinks-track' => true %>
-
-  
-  <!--<%= javascript_include_tag 'modernizr', 'data-turbolinks-track' => true %>-->
-  <%= javascript_include_tag 'jquery-2.1.1', 'data-turbolinks-track' => true %>
-  <!--<%= javascript_include_tag 'jquery.mixitup.min', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'main', 'data-turbolinks-track' => true %>-->
 
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
   <style type="text/css">
 
   <style type="text/css">
-  #about{
-    background-color:white;
-  }
   .home{
+    margin-top:3em;
     background-color:#4794b0;
   }
-  .will_paginate{
-      /*stupid thing still doesnt work. investigate some more*/
-      color:#aed365;
-      position: relative;
-      margin:0 auto;
-      margin-top: 0.5em;
-    }
-    .footer-2{
-      list-style-type: none;
-      display: inline-block;
-    }
-    .logo{
-      padding-top:0.8em;
-    }
-    .footer-2, li{
-      display: inline;
-      padding-left: 1.5em;
-    }
-    .nav-size{
-      height:65px;
-    }
-    .ul-nav{
-      padding-left:5em;
-      padding-top:0.5em;
-      font-size: 20px;
-      font-family: garamond;
-      font-weight: bold;
-    }
-    .about-title{
-      font-family: garamond;
-      color:black;
-      font-size: 24px; 
-      text-align: center;
-    }
-    .about-text{
-      text-align: center
-      font-size:14px;
-      font-family: Corbel; /*ask to retain original font family this looks horrible*/
-      color:black;
-    }
-    .pub-title{
-      font-family: Garamond;
-      color:white;
-      font-size:24px;
-      font-weight: bold;
-    }
-    .pub-text{
-      font-family:Corbel;
-      font-size:14px;
-      font-color:white;
-      text-align: 
-    }
-    .footer-contact{
-      text-align: center;
-      font-family: Corbel;
-      color:white;
-      font-size: 12px;
-      margin-top:1.3em;
-      margin-bottom: 1.3em;
-    }
     .search{
       width:210%;
     }
-    /*.will_paginate{
-      stupid thing still dowsnt work. investigate some more
-      color:chocolate;
-      position: relative;
-      margin:0 auto;
-      margin-top: 0.5em;
+    .footer-m{
+      margin-bottom: 0.5em;
     }
-    .will_paginate, a{
-      color:chocolate;
-    }*/
-    .footer-2{
-      list-style-type: none;
-      display: inline-block;
-      padding-top:1em;
-      padding-bottom:1em;
-    }
-    .footer-2, li{
-      display: inline;
-      padding-left: 1.5em;
     }
     .event-image{
       height:150px;
@@ -418,50 +318,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
   <!--<meta content="authenticity_token" name="csrf-param" />
 <meta content="1085Id9jeQT0ELwlM6yOTZUuW9/k/ukMTTN7sOTX1Iw=" name="csrf-token" />-->
 </head>
-<body class="home" data-spy="scroll" data-target=".navbar-collapse">
-<!-- Navbar -->
-<!-- Navbar -->
-<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="nav-size container nav-container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <%=link_to (image_tag("logo.png", alt: "Logo white", class: "logo")), homes_path, class: "logo navbar-brand in-app", anchor: "landing" %>
-    </div>
-    <div class="collapse navbar-collapse text-center">
-          <ul class="ul-nav nav navbar-nav">
-            <!--<li><%= link_to "Home", :anchor => "landing", class: "in-app" %></li>-->
-            <li><%= link_to "About",homes_path, :anchor => "about" %></li>
-            <li><%= link_to "Events", events_path %></li>
-            <li><%= link_to "Publications",homes_path, :anchor => "publications", class: "in-app" %></li>
-            <li><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
-          </ul>  
-    </div>
-  </div>
-<!--/.nav-collapse -->
-</div>
-<!-- /Navbar -->
-<!-- search -->
-<!--<%= form_tag events_path, :method => :get do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil, :class => "button postfix" %>
-<% end %>-->
-
-
-
-  
-<div class="rows container">
-<!--search box-->
-<!--<div class="search-box wb-bottom" style="padding: 5px; overflow: hidden; border-bottom-width:2px;">
-    <form>
-      <input type="text" class="search-input wb" placeholder="Search By Category..."/ style="border-width:2px; width:40%; margin-right:2%; padding:10px; font-size:14px; float:left;">
-      <input type="submit" class="search-button wb" value="Go" style="width:20%; background: rgba(255,255,255, 0.15); border-width:2px;"/>
-    </form>
-</div>-->
+<body>  
+<div class="home rows container">
   <div class="row" >
       <div class="col-sm-3 text-left features" style=" box-shadow: 1px 2px 0px #002; margin-top: 3em; margin-right: 3em;"> 
         <!-- put the guys in this section in one huge div that you style to correspond to the one in that ka thingy  of eventsbrite -->
@@ -473,87 +331,69 @@ $('#cssmenu li.has-sub>a').on('click', function(){
               <%#= submit_tag "Search", :name => nil, :class => "button postfix" %>
             <% end %>
           </div>
-          <!--<input type="text" placeholder="Enter Category..." style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:66%; margin-left: 3em; margin-top:2em;" >-->
           <div style="position: relative; box-sizing: border-nox; display; inline-block; overflow: hidden; vertical-align: top; margin-top: 1em;">
             <div id='cssmenu'>
               <ul>
                 <li class='active has-sub'><a href='#'><span>Industry</span></a>
                     <ul>
+                      <!-- if you link industry name to this twill save you a whole lotsa trouble
                       <% @industries.each do |industry| %>
                         <li><a href='<%= "#{events_path}?industry=#{industry.name}" %>'><span>Automotive</span></a>
                         </li>
-                      <% end %>
-                      <li><a href='<%= "#{events_path}?industry=Advertising-Marketing" %>'><span>Advertising-Marketing</span></a></li>
-                      <li><a href='#'><span>Architecture</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Automotive" %>'><span>Automotive</span></a></li>
-                      <li> <%= link_to (find_category("Aeronautical")) %></li>
-                      <!-- this is aeronautical now just find out how to link to the method and all is well-->
-                      <li><a href='#'><span>Aviation</span></a></li>
-                      <li><a href='#'><span>Banking</span></a></li>
-                      <li><a href='#'><span>Beauty</span></a></li>
-                      <li><a href='#'><span>Business Management</span></a></li>
-                      <li><a href='#'><span>Chemicals</span></a></li>
-                      <li><a href='#'><span>Cleaning</span></a></li>
-                      <li><a href='#'><span>Conservation (exc Wildlife)</span></a></li>
-                      <li><a href='#'><span>Construction</span></a></li>
-                      <li><a href='#'><span>Education</span></a></li>
-                      <li><a href='#'><span>Energy</span></a></li>
-                      <li><a href='#'><span>Engineering</span></a></li>
-                      <li><a href='#'><span>Entertainment</span></a></li>
-                      <li><a href='#'><span>Entrepreneurship</span></a></li>
-                      <li><a href='#'><span>Fashion & Accessories & Apparel</span></a></li>
-                      <li><a href='#'><span>Fast Moving Cosumer Goods (FMCG)</span></a></li>
-                      <li><a href='#'><span>Film & TV</span></a></li>
-                      <li><a href='#'><span>Financing/span></a></li>
-                      <li><a href='#'><span>Food</span></a></li>
-                      <li><a href='#'><span>Food processing</span></a></li>
-                      <li><a href='#'><span>Gender, Youth & Children</span></a></li>
-                      <li><a href='#'><span>Government</span></a></li>
-                      <li><a href='#'><span>Healthcare</span></a></li>
-                      <li><a href='#'><span>Hospitality</span></a></li>
-                      <li><a href='#'><span>Human Resources</span></a></li>
-                      <li><a href='#'><span>Hospitality</span></a></li>
-                      <li><a href='#'><span>Industry</span></a></li>
-                      <li><a href='#'><span>Information Technology</span></a></li>
-                      <li><a href='#'><span>Infrastructure</span></a></li>
-                      <li><a href='#'><span>Insurance</span></a></li>
-                      <li><a href='#'><span>Interior Design</span></a></li>
-                      <li><a href='#'><span>International Development</span></a></li>
-                      <li><a href='#'><span>Investment & Securities</span></a></li>
-                      <li><a href='#'><span>Legal</span></a></li>
-                      <li><a href='#'><span>Logistics</span></a></li>
-                      <li><a href='#'><span>Manufacturing (goods)</span></a></li>
-                      <li><a href='#'><span>Marine & Maritime</span></a></li>
-                      <li><a href='#'><span>Marketing</span></a></li>
-                      <li><a href='#'><span>Media & Communication</span></a></li>
-                      <li><a href='#'><span>MICE</span></a></li>
-                      <li><a href='#'><span>Mining</span></a></li>
-                      <li><a href='#'><span>Music</span></a></li>
-                                </ul>
+                      <% end %>-->
+
+
+                      <li><a href='<%= "#{events_path}?industry=Agriculture" %>'><span>Agriculture</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Assembly" %>'><span>Assembly</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Beauty" %>'><span>Beauty</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Conservation" %>'><span>Conservation</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Construction" %>'><span>Construction</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Creative services" %>'><span>Creative services</span></a></li><!--not sure how it will handle the space. if not just remove the services from the seacrh params-->
+                      <li><a href='<%= "#{events_path}?industry=Education" %>'><span>Education</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Entertainment" %>'><span>Entertainment</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Entrepreneurship" %>'><span>Entrepreneurship</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Financial services" %>'><span>Financial services</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Entrepreneurship" %>'><span>Entrepreneurship</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Gender & Children" %>'><span>Gender & Children</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Governance" %>'><span>Governance</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Healthcare" %>'><span>Healthcare</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Household" %>'><span>Household</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Human resources" %>'><span>Human Resources</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=I.C.T" %>'><span>I.C.T</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Investment" %>'><span>Investment</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Logistics" %>'><span>Logistics</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Manufacturing" %>'><span>Manufacturing</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Marketing" %>'><span>Marketing</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Media & comms" %>'><span>Media & comms</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Mining" %>'><span>Mining</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Professional services" %>'><span>Professional services</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Sales & marketing" %>'><span>Sales & Marketing</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Security" %>'><span>Security</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Social development" %>'><span>Social Development</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Sustainability" %>'><span>Sustainability</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Tourism" %>'><span>Tourism</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Trade" %>'><span>Trade</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Travel" %>'><span>Travel</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Well-being" %>'><span>Well-being</span></a></li>
+                    </ul>
                 </li>
                 <li class='active has-sub'><a href='#'><span>Location</span></a>
                     <ul>
-                      <li><a href='#'><span>Nairobi</span></a></li>
-                      <li><a href='#'><span>Rwanda</span></a></li>
+                      <li><a href='<%= "#{events_path}?location=Nairobi" %>'><span>Nairobi</span></a></li>
+                      <li><a href='<%= "#{events_path}?location=Mombasa" %>'><span>Mombasa</span></a></li>
+                      <li><a href='<%= "#{events_path}?location=Kisumu" %>'><span>Kisumu</span></a></li>
+                      <li><a href='<%= "#{events_path}?location=Kigali" %>'><span>Kigali</span></a></li>
+                      <li><a href='<%= "#{events_path}?location=Kampala" %>'><span>Kampala</span></a></li>
                     </ul>
                 </li>
-                <li class='active has-sub'><a href='#'><span>Venue</span></a>
+                <!--<li class='active has-sub'><a href='#'><span>Venue</span></a>
                     <ul>
                       <li><a href='#'><span>Serena</span></a></li>
                       <li><a href='#'><span>Hilton</span></a></li>
                     </ul>
-                </li>
+                </li>-->
               </ul>
             </div>
-            <!--<div style="background-color: #fff; margin: 0 auto; padding-left:2em; padding-bottom: 5px; border-bottom:thin solid #dedede; width:60%;">
-              <h3 style="border-bottom: medium none; cursor: pointer; padding-right: 20px; color: #00b6bf; text-decoration: none; font-size: 15px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">Category</h3>
-            </div>
-            <div style="background-color: #fff; margin: 0 auto; padding-left:2em; padding-bottom: 5px; border-bottom:thin solid #dedede; width:60%;">
-              <h3 style="border-bottom: medium none; cursor: pointer; padding-right: 20px; color: #00b6bf; text-decoration: none; font-size: 15px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">Event Type</h3>
-            </div>
-            <div style="background-color: #fff; margin: 0 auto; padding-left:2em; padding-bottom: 5px; border-bottom:thin solid #dedede; width:60%;">
-              <h3 style="border-bottom: medium none; cursor: pointer; padding-right: 20px; color: #00b6bf; text-decoration: none; font-size: 15px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">Date</h3>
-            </div>-->
             <% if user_signed_in? %>
             <%= link_to 'New Event', new_event_path, class: "new-event" %><!-- make an option for this to appear when signed in on the users profile page -->
             <% end %>
@@ -563,14 +403,14 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 
       <div class="col-sm-8 text-left features free title-pos" style="box-shadow: 1px 2px 0px 0px #002;" >
         <h2 class=" page-title padded-bottom title-pos "> Events</h2>
-        <section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
+        <!--<section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
                 <li href="" style="padding-right: -20px;  color: #666; background-color: #ffe; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
                     date
                 </li>
                 <li href="" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-right: 1px solid #dedede; border-box; display:inline-block; font-size: 12px; padding: 0px 20px; background-color: #ededed;line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; color: #0086bf; text-transform: uppercase;text-align: right; letter-spacing:0.5px;">
                     location
                 </li>
-            </section>
+            </section>-->
         <% @events.each do |event| %>
         <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:15px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
           <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; min-width: 150px; min-height:150px; margin: 0px; padding:0px; clear:both;" >
@@ -597,59 +437,11 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         <% end %>
          <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
-    </div>
+  </div>
     
   </div>
-
-      <!--<div id="footer" class="getstarted s-black" style="margin-top: 1em;">
-        <div class="container">
-          <footer>
-            <div id="footer"class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
-                <p class="footer-title caps">Contact Us</p>
-                <p>Email:<a href="mailto:hello@revision844.co.ke"> hello@mkutatanotravel.com</a></p>
-                <p>Phone Number:                                                                                                                                    <a href="tel:0717565133"> 0717 164 504</a></p>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 padded-bottom">
-                <p class="footer-title caps">We are Social</p>
-                <ul class="no-discs">
-                  <li class="">Facebook : <a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts">Mkutano Business Travel</a></li>
-                  <li class="">Twitter : <a href="https://twitter.com/?lang=en">@mkutanotravel</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <p class="footer-title caps">Subscribe</p>
-                <p>Subscribe today &amp;<br> receive our monthly newsletter</p>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </div>-->
-<div id="footer" class="getstarted s-blue navbar-inverse" style="margin-top: 1em;">
-  <div class="container">
-    <footer>
-      <div class="footer-contact">
-        <p>&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
-        <nav>
-          <ul class="footer-2">
-            <li><%= link_to "About",homes_path %> </li>
-            <li><%= link_to "Events", homes_path %></li>
-            <li><%= link_to "Publications",homes_path %></li>
-            <li><%= link_to "Contact ", :anchor => "contact" %></li>
-          </ul>
-        </nav>
-        <p class="" style="margin: 0 auto; word-spacing: 0.5em; color:#00ccff;">      Position | Connect | Grow
-        </p>
-      </div>
-    </footer>
-  </div>
-</div>
-
-
+</body>
 <!-- ££££££££££££££££ AREA 51 ££££££££££££££££££££-->
-<%# @events.each do |event| %>
- <%#= select("event", "category", Event::CATEGORIES, {include_blank: true}) %>
-<%# end %>
-<%#= select("event[]", "category", %w[rap rock country], {}, { index: nil }) %>
+
           
 

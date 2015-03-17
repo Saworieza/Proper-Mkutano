@@ -8,6 +8,8 @@ class EventsController < ApplicationController
     @industries = Industry.all
     if params.has_key?("industry")
       @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+    elsif params.has_key?("location")
+            @events = Event.where(location: params[:location]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     else
       @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)#y you no work?
       
@@ -28,6 +30,11 @@ class EventsController < ApplicationController
     @event = Event.find_categories(string)
   end
   helper_method :find_category
+
+  def find_location (string)
+    @event = Event.find_locations(string)
+  end
+  helper_method :find_location
 
   # GET /events/new
   def new
