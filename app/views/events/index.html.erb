@@ -123,13 +123,13 @@
 #cssmenu > ul > li > a:hover,
 #cssmenu > ul > li.active > a,
 #cssmenu > ul > li.open > a {
-  color: #eeeeee;
-  background: #1fa0e4;
-  background: -webkit-linear-gradient(#1fa0e4, #1992d1);
-  background: -moz-linear-gradient(#1fa0e4, #1992d1);
-  background: -o-linear-gradient(#1fa0e4, #1992d1);
-  background: -ms-linear-gradient(#1fa0e4, #1992d1);
-  background: linear-gradient(#1fa0e4, #1992d1);
+  color: #000;
+  background: #fff;
+  background: -webkit-linear-gradient(#fff, #001);
+  background: -moz-linear-gradient(#fff, #001);
+  background: -o-linear-gradient(#fff, #001);
+  background: -ms-linear-gradient(#fff, #001);
+  background: linear-gradient(#fff, #ffe);
 }
 #cssmenu > ul > li.open > a {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -429,16 +429,16 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           </div>
           <div style="overflow:hidden; padding-right: 30px; padding-left: 30px;"><!-- event details-->
             <h3 style=" color: #0086bf; font-size:20px; font-family: Corbel; line-height: 30px; font-weight: 40; text-overflow:ellipsis; overflow: hidden; whitespace:nowrap; margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
-            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; font-family: Corbel; line-height: 25px; color: #180000;">
+            <p style="margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 16px; font-family: Corbel; line-height: 25px; color: #180000;">
              Theme : <span style="text-transform:capitalize; font-family: Corbel; color: #000;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style=" font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+            <p style=" font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 16px; line-height: 25px; color: #180000;">
              Industry: <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style="font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+            <p style="font-family: Corbel; margin-bottom:0px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 16px; line-height: 25px; color: #180000;">
              Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> To: <%= event.date %></span>
             </p>
-            <p style="font-family: Corbel; margin-bottom:1em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 15px; line-height: 25px; color: #180000;">
+            <p style="font-family: Corbel; margin-bottom:1em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: block; font-size: 16px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>
           </div>
