@@ -7,8 +7,10 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
-gem 'sunspot_rails' #production
 gem 'progress_bar'
+gem 'sunspot_rails' #production
+
+gem 'favicon_maker_rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
