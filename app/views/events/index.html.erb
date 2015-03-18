@@ -405,6 +405,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             </div>
             <% if user_signed_in? %>
             <%= link_to 'New Event', new_event_path, class: "new-event" %><!-- make an option for this to appear when signed in on the users profile page -->
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
             <% end %>
           </div>
         </div>
