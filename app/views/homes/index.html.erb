@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <head>
   <!-- some code is commented because i just dont have the heart to kill them-->
-    
+    <style type="text/css">
+       .speak{
+          font-weight: bold;
+        }
+        .left-t{
+          font-size: 18px;
+          text-align: right;
+          font-family: Corbel;
+          border-right: thin solid black;
+        }
+        .right-t{
+          font-size: 18px;
+          text-align: left;
+          font-family: Corbel;
+        }
+        .logo-home{
+          padding-top: 5em;
+          margin:0 auto;
+          width:120%;
+        }
+        .home-title{
+          font-size:50px;
+          text-align: right;
+          color:#fff;
+          /*subject to change once the responsiveness is figured out*/
+          padding-left: 4em;
+          position: absolute;
+
+        }
+        @media only screen and (max-width: 320px) { .home-title{ font-size: 1em; }
+
+}
+    </style>
 
   <title> Mkutano </title>
 
@@ -10,8 +42,9 @@
 <!-- main content -->
 <div id="landing" class="landing section ">
     <div class="container text-center">
-        <%#= image_tag("logo-frontpage-5bf33be43c14454b9b82428bcb16e356.png", alt: "Logo frontpage", class: "logo"  )%>
-        <%= image_tag("", class: "explore in-app bounce glyphicon glyphicon-chevron-down") %> 
+        <%= image_tag("thha.png", alt: "Logo frontpage", class: "logo-home"  )%>
+        <p class="home-title">Position | Connect | Grow</p>
+        <%#= image_tag("", class: "explore in-app bounce glyphicon glyphicon-chevron-down") %> 
         <!--<a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>-->
     </div>
 </div>
@@ -28,22 +61,38 @@
     <h1 class="page-title padded-bottom"> Our Services Include </h1>
     <!-- ### to add check box, do class=" check" to p, to remove do reverse -->
     <div class="row free" style="border-bottom:none;">
-      <div class="col-sm-6 text-left features">
-        <p class="about-text icon-li check" >Event Consultation</p>
-        <p class="about-text icon-li check">Event Ticketing, Accomodation and Travel Booking as required</p>
-        <p class="about-text icon-li check">Event Materials</p>
-        <p class="about-text icon-li check">Event Briefing and Itineraries</p>
-        <p></p>
-      </div>
-      <div class="col-sm-6 text-left features" style="border-right:none;"><!-- add a class called price to make text green -->
-        <p class="about-text icon-li ">To assist you in selecting the event(s) most suited to your needs</p>
-        <p class="about-text icon-li ">To help you get competitive preferential rates</p>
-        <p class="about-text icon-li " >To help you effectively showcase your product or service </p>
-        <p class="about-text icon-li " >To help you know what to expect and therefore make the most of your time</p>
-      </div>
+
+        <table class="table table-hover">
+        <thead>
+          <tr>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td class="left-t" >Event Consultation</td>
+            <td class="right-t">To assist you in selecting the event(s) most suited to your needs</td>
+          </tr>
+          <tr>
+            <td class="left-t" >Event Ticketing, Accomodation and Travel Booking as required</td>
+            <td class="right-t" >To help you get competitive preferential rates</td>
+          </tr>
+          <tr>
+            <td class="left-t" >Event Materials</td>
+            <td class="right-t" >To help you effectively showcase your product or service </td>
+          </tr>
+          <tr>
+            <td class="left-t" >Event Briefing and Itineraries</td>
+            <td class="right-t" >To help you know what to expect and therefore make the most of your time</td>
+          </tr>
+          <tr></tr>
+        </tbody>
+      </table>
+
       <p class="about-text"> ... and several other benefits such as discounted professional training and travel rates.</p>
       <p class="about-text" >Industry events are indeed the new way of doing business. Don’t get left behind.
-        <%= link_to "Speak to us", :anchor => "footer" %> today to see how we can help you.
+        <span class="speak"><%= link_to "Speak to us", :anchor => "footer", class: "speak" %></span> </p>
+      <p class="about-text">today to see how we can help you.</p>
       </p>
     </div>
   </div>
