@@ -7,11 +7,11 @@ class Event < ActiveRecord::Base
   
   #relationship for industry name and event
    belongs_to :industry
-=begin
+
   searchable do
     text :category, :location, :country, :venue, :name, :theme
   end
-=end
+
 
   def Event.find_categories(string)
   	return found_event = Event.find_by_category(string)

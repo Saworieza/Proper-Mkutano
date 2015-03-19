@@ -10,10 +10,7 @@ needs to be added
 stuff that need a doing
 
 create user dashboard
-
-routing as the lady requires
+algorithm for not displaying events for dates already passed
 
 Dumped for collection stuff
 
-
-text-overflow:ellipsis; overflow: hidden; whitespace:nowrap;

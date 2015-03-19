@@ -45,13 +45,32 @@
       border-radius: 4px;
       box-sizing: border-box;
       display:inline-block;
-      font-size: 12px;
+      font-size: 10px;
       padding: 0px 10px;
       line-height: 30px;
       height:30px;
-      width: 10.6em;
-      border-left:
-      1px solid #dedede;
+      border-left:1px solid #dedede;
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-decoration:none;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing:0.5px;
+      font-family: Corbel;
+    }
+    .logout{
+      margin-bottom: 1em;
+      color: red;
+      background-color: #ededed;
+      border-radius: 4px;
+      box-sizing: border-box;
+      display:inline-block;
+      font-size: 10px;
+      padding: 0px 10px;
+      line-height: 30px;
+      height:30px;
+      border-left:1px solid #dedede;
       border-top: 1px solid #dedede;
       border-bottom: 1px solid #dedede;
       text-decoration:none;
@@ -323,7 +342,33 @@ $('#cssmenu li.has-sub>a').on('click', function(){
   <!--<meta content="authenticity_token" name="csrf-param" />
 <meta content="1085Id9jeQT0ELwlM6yOTZUuW9/k/ukMTTN7sOTX1Iw=" name="csrf-token" />-->
 
-<body>  
+<body> 
+<!-- Navbar -->
+<div class="navi navbar-fixed-top" ></div>
+<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="nav-size container nav-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <%=link_to (image_tag("thha.png", alt: "Logo white", class: "logo")), homes_path, class: "logo navbar-brand in-app", anchor: "landing" %>
+    </div>
+    <div class="collapse navbar-collapse text-center" >
+          <ul class="ul-nav nav navbar-nav" >
+            <li class="nav-background"><%= link_to "About", homes_path %></li>
+            <li class="nav-background"><%= link_to "Events", events_path %></li>
+            <li class="nav-background"><%= link_to "Publications", homes_path, class: "in-app" %></li>
+            <li class="nav-background"><%= link_to "Contact", :anchor => "footer", class: "in-app" %></li>
+          </ul>  
+    </div>
+  </div>
+<!--/.nav-collapse -->
+</div>
+<!-- /Navbar -->
+
 <div class="home rows">
   <div class="row" >
       <div class="col-sm-3 text-left features" style=" margin-top: 3em; margin-right: 3em;"> 
@@ -405,7 +450,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             </div>
             <% if user_signed_in? %>
             <%= link_to 'New Event', new_event_path, class: "new-event" %><!-- make an option for this to appear when signed in on the users profile page -->
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <%= link_to('Logout', destroy_user_session_path, class: "logout", :method => :delete) %>
             <% end %>
           </div>
         </div>
@@ -428,7 +473,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
               <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event, class: "event-image"%></div>
             </div>  
           </div>
-          <div style="overflow:hidden; padding-right: 30px; padding-left: 30px;"><!-- event details-->
+          <div style="overflow:hidden; height:150px; padding-right: 30px; padding-left: 30px;"><!-- event details-->
             <h3 style=" color: #0086bf; font-size:20px; font-family: Corbel; line-height: 30px; font-weight: 40;  margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
             <p style="margin-bottom:0px; display: block; font-size: 16px; font-family: Corbel; line-height: 25px; color: #180000;">
              Theme : <span style="text-transform:capitalize; font-family: Corbel; color: #000;"><%= event.theme %></span>
@@ -437,7 +482,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
              Industry: <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
             <p style="font-family: Corbel; margin-bottom:0px;  display: block; font-size: 16px; line-height: 25px; color: #180000;">
-             Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> To: <%= event.date %></span>
+             Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> <!-- To: --><%#= event.date %></span>
             </p>
             <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 16px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
@@ -445,11 +490,31 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           </div>
         </div><!-- /event container-->
         <% end %>
-         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
+         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Latest", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
   </div>
-    
+</div>
+
+<!-- footer-->
+<div id="footer" class="getstarted s-blue footer-nav">
+  <div class="container">
+    <footer>
+      <div class="footer-contact">
+        <p class="footer-m">&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
+        <nav>
+          <ul class="footer-2">
+            <li><%= link_to "About", homes_path %> </li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Publications",homes_path %></li>
+            <li><%= link_to "Contact ", :anchor => "contact" %></li>
+          </ul>
+        </nav>
+        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#fff;">      Position | Connect | Grow
+        </p>
+      </div>
+    </footer>
   </div>
+</div>
 </body>
 <!-- ££££££££££££££££ AREA 51 ££££££££££££££££££££-->
 
