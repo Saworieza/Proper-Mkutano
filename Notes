@@ -1,39 +1,14 @@
-anytime you start this stuff please start the sunspot server by running 
-	
+anytime you start this stuff please start the sunspot server by running
 rake sunspot:solr:start
-
-styling fixes
-margin top from stuff under the nav
-background image positioning for the home page images
-background color events page 	
-
-
-stuff that need a fixing
-on the events page get the bloody pagination to work
-
-
-fixed stuff and how
-fix the crazy switching image sizes (Temporary fix by adding a margin of 1em to the bottom item)
-get the links to work with the events title etc(fixed. turns out the links are white in bootstrap mother node. need to change that.)
-fixed the bloody image file from that css 
-the images on the home page need be changed - changed after our app css started working
-okay, pagination works for search. now to make it work for the remaining idiots. fixed it by get the results from solr then search your model by ids that solr returned and paginate them, 
-
-
 
 need styling
 include a place to place the tickets from eventsbrite
 
 
 needs to be added
-favicon
-box-shadow: 1px 0px 0px #002;
-
-
 
 stuff that need a doing
-User authentication
-Event creation form one use
+
 create user dashboard
 
 routing as the lady requires
@@ -41,6 +16,4 @@ routing as the lady requires
 Dumped for collection stuff
 
 
-Notes on Following latest design docs
-choice of font family and color is thoroughly questionable. stuff looks horrible therefore i am inline styling them on the page so that if need be i just remove their classes and they revert to defaults
-event [age background: white or white smoke. for the client prefered color, horrible
+text-overflow:ellipsis; overflow: hidden; whitespace:nowrap;

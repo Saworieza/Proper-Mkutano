@@ -13,10 +13,10 @@ class EventsController < ApplicationController
     else
       @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
       
-      @query = Event.search do
-          fulltext params[:search]
-      end
-      @events = Event.where(id: @query.results.map(&:id)).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+      #@query = Event.search do
+          #fulltext params[:search]
+    #end
+      #@events = Event.where(id: @query.results.map(&:id)).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     end
   end
 
