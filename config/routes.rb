@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users
+  as :user do
+    get "/login" => "devise/sessions#new"
+  
+    delete "/logout" => "devise/sessions#destroy"
+    get "/signup" => "devise/registrations#new"
+  end
+  
+=begin
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+  end
+  devise_scope :user do
+    delete "/logout" => "devise/sessions#destroy"
+  end
+  devise_scope :user do
+    get "/register" => "devise/registrations#new"
+  end
+=end  
   resources :events
 
   resources :homes

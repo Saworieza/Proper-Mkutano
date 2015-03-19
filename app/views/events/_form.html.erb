@@ -1,6 +1,14 @@
 
 <!-- styles and scripts -->
 <style type="text/css">
+.submit > a{
+  background: #2471FF;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #5994FF;
+  border-radius: 3px;
+  color: #D2E2FF;
+}
 .form-style-7{
     max-width:400px;
     margin:50px auto;
@@ -171,7 +179,12 @@ function adjust_textarea(h) {
   <%= f.label :country %><br>
   <%= f.text_field :country %>
 </li>
-<%= f.submit  %>
+
+<div class="submit">
+  <%= f.submit "Okay"  %> 
+  <%= link_to 'Cancel', events_path %>
+</div>
 </ul>
 <% end %>
+
 </div>
