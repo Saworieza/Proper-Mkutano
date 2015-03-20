@@ -2,6 +2,7 @@ class Event < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "150x150>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
+  validates :category, :location, :country, :venue, :name, :theme, presence: true
 
   belongs_to :user
   
@@ -10,6 +11,11 @@ class Event < ActiveRecord::Base
 
   searchable do
     text :category, :location, :country, :venue, :name, :theme
+  end
+
+  #custom search
+  def self.search
+    where("email like ?", "%#{query}")
   end
 
 

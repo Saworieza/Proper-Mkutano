@@ -10,8 +10,13 @@ class EventsController < ApplicationController
       @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     elsif params.has_key?("country")
             @events = Event.where(country: params[:country]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
-    else
-      @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+      elsif
+        @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+      elsif params[:search]
+          @events = Event.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+      elsif
+        @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+
       
       #@query = Event.search do
           #fulltext params[:search]

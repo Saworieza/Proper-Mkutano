@@ -376,7 +376,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         
         <div style="">
           <div style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:50%; margin-left: 1em; margin-top:2em;" >
-            <%= form_tag events_path, :method => :get do %>
+            
+            <%= form_tag(events_path, :method => "get", id: "search-form") do %>
               <%= text_field_tag :search, params[:search], placeholder: '   Search ...',class: "search" %>
               <%#= submit_tag "Search", :name => nil, :class => "button postfix" %>
             <% end %>

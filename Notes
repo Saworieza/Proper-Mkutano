@@ -34,3 +34,5 @@ Dumped for collection stuff
                         </li>
                       <%# end %>-->
                       #@industries = Industry.all goes to events controller index method
+for some weird reason search still doesnt work. next step. find muad
+                      <%#ßß= form_tag (events_path, :method => :get) do %>
