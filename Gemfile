@@ -8,9 +8,10 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 gem 'progress_bar'
-gem 'sunspot_rails' #production
+
 
 gem 'favicon_maker_rails'
+gem 'bootstrap-sass', '~> 3.3.4.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -57,10 +58,11 @@ end
 
 group :development do
 	gem 'sqlite3'
-	gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+	#gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 end
 
 group :production do
 	gem 'pg'
+	#gem 'sunspot_rails' #production
 end
 

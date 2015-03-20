@@ -135,9 +135,9 @@
     <div id="actions">
       <% if user_signed_in? %>
       <%= link_to 'Edit', edit_event_path(@event), class: "actions" %> |
-      <%= link_to 'Back', events_path, class: "actions" %> |
-      <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+      <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %> |
       <% end %>
+      <%= link_to 'Back', events_path, class: "actions" %> 
     </div>
   </div>
   </div>

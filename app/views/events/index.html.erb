@@ -387,7 +387,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                 <li class='active'><%= link_to "All", events_path %></li>
                 <li class='active has-sub'><a href='#'><span>Industry</span></a>
                     <ul>
-                      <!-- if you link industry name to this twill save you a whole lotsa trouble
+                      <!-- if you link industry name from industry model to this twill save you a whole lotsa trouble
                       <% @industries.each do |industry| %>
                         <li><a href='<%= "#{events_path}?industry=#{industry.name}" %>'><span>Automotive</span></a>
                         </li>
