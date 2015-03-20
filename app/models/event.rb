@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
   belongs_to :user
   
   #relationship for industry name and event
-   belongs_to :industry
+  belongs_to :industry
 
   #searchable do
     #text :category, :location, :country, :venue, :name, :theme
