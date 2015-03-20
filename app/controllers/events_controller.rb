@@ -15,9 +15,10 @@ class EventsController < ApplicationController
       
       #@query = Event.search do
           #fulltext params[:search]
-    end
-      #@events = Event.where(id: @query.results.map(&:id)).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     #end
+      #@events = Event.where(id: @query.results.map(&:id)).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+    end
+
 =begin    
     code to hide past dates. to be refined later
     @events = Event.find(:all, 
