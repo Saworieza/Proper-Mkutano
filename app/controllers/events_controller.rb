@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
 
   def index
-    #@industries = Industry.all
+    
     if params.has_key?("industry")
       @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     elsif params.has_key?("country")
@@ -15,7 +15,7 @@ class EventsController < ApplicationController
       
       #@query = Event.search do
           #fulltext params[:search]
-    #end
+      #end
       #@events = Event.where(id: @query.results.map(&:id)).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     end
 

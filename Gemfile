@@ -58,11 +58,11 @@ end
 
 group :development do
 	gem 'sqlite3'
-	#gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+	gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 end
 
 group :production do
 	gem 'pg'
-	#gem 'sunspot_rails' #production
+	gem 'sunspot_rails' #production
 end
 
