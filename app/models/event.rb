@@ -9,9 +9,9 @@ class Event < ActiveRecord::Base
   #relationship for industry name and event
   belongs_to :industry
 
-  searchable do
-    text :category, :location, :country, :venue, :name, :theme
-  end
+  #searchable do
+    #text :category, :location, :country, :venue, :name, :theme
+  #end
 
   #custom search
   def self.search
