@@ -14,7 +14,7 @@
     
     <%= favicon_link_tag 'favicon.ico' %>
 
-  <title>Mkutano</title>
+  <title>Mkutano |Position| Connect| Grow</title>
    <%= stylesheet_link_tag    'application-145ebbae97fba5f8c6e03b2e3dbe19cb', media: 'all', 'data-turbolinks-track' => true %>
 
   <link data-turbolinks-track="true" href="http://fonts.googleapis.com/css?family=Open+Sans:400" media="all" rel="stylesheet" />
@@ -41,11 +41,13 @@
   .speak{
     font-weight: bold;
   }
+  .speak>a:hover{
+    color: #3f92ae;
+  }
   .nav-background{
     background-color:#fff  ;
   }
   .will_paginate{
-      /*stupid thing still dowsnt work. investigate some more*/
       color:#aed365;
       position: relative;
       margin:0 auto;
@@ -91,56 +93,80 @@
     .about-title{
       font-family: garamond;
       color:black;
-      font-size: 24px; 
+      font-size: 16px; 
       text-align: center;
-      padding-top:1em;
+      padding-top:0.4em;
+      padding-bottom:0.4em;
     }
     .about-text{
-      text-align: center
-      font-size:14px;
-      font-family: Corbel; /*ask to retain original font family this looks horrible*/
+      text-align: center;
+      font-size:12px;
+      font-family: Corbel;
       color:black;
+    }
+    .about-text>a:hover{
+      text-decoration: none;
+    }
+    /* dont know how she saw this in her head. ask her*/
+    .pub-box{
+      /*background-color: silver;
+      /*visibility: 40%;*/
+      width:60%;
+      margin:0 auto;
     }
     .pub-title{
       font-family: Garamond;
-      color:black;/* changed this as the background-color is too white*/
-      font-size:24px;
+      color:black;
+      font-size:16px;
       font-weight: bold;
     }
     .pub-text{
       color: black;
       font-family:Corbel;
-      font-size:18px;
+      font-size:12px;
       text-align: 
+    }
+    .pub-text>a{
+      text-decoration: none;
+    }
+    p>.pub-text:hover{
+      background-color: silver;
     }
     .footer-contact{
       text-align: center;
       font-family: Corbel;
       color:white;
-      font-size: 16px;
+      font-size: 10px;
       margin-top:1.3em;
       margin-bottom: 1.3em;
     }
     .foot-contact{
+      color: black;
       margin:0 auto;
       width:50%;
       text-align: left;
       padding-left: 0;
       font-family: Corbel;
-      font-size: 16px;
+      font-size: 12px;
+      line-height: normal;
     }
     .foot-contact>a:hover{
-      color:black;
+      color:#aed365;
       text-decoration: none;
     }
     .footer-cont{
+      margin-top:;
       margin-left:8em;
     }
     .footer-nav{
       background-color:black;
     }
     .span{
+      color:black;
       word-spacing: 0.5rem;
+    }
+    .span>a{
+      color: black;
     }
 </style>
 </head>

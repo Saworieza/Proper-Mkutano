@@ -12,7 +12,7 @@
     <meta name="author" content="HabaHaba">
     <%= favicon_link_tag 'favicon.ico' %>
 
-  <title> Mkutano </title>
+  <title>Mkutano |Position| Connect| Grow</title>
 
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
@@ -37,6 +37,14 @@
       max-height: 150px !important;
       max-width: 150px !important;
     }
+    .event-text{
+      clear:both;
+      font-family:Corbel;
+      font-size:12px;
+      text-align: center;
+      padding-top:1.5em;
+      padding-bottom: 1em;
+    }
     .new-event{
       margin-left: 2.9em;
       margin-bottom: 1em;
@@ -45,7 +53,7 @@
       border-radius: 4px;
       box-sizing: border-box;
       display:inline-block;
-      font-size: 10px;
+      font-size: 12px;
       padding: 0px 10px;
       line-height: 30px;
       height:30px;
@@ -66,7 +74,7 @@
       border-radius: 4px;
       box-sizing: border-box;
       display:inline-block;
-      font-size: 10px;
+      font-size: 12px;
       padding: 0px 10px;
       line-height: 30px;
       height:30px;
@@ -81,8 +89,21 @@
       font-family: Corbel;
     }
     .title-pos{
+      color:white;
+      font-size: 16px;
       margin-top:1em;
       margin-bottom: 0.2em; */
+    }
+    .ad{
+      text-align: center;
+      border:thin solid #aed365 ;
+      margin-bottom:5px;
+      width:240;
+      height:400px;
+    }
+    .ad>p{
+      position: relative;
+      top: 50%
     }
 
 
@@ -125,7 +146,7 @@
   border-top: 1px solid #1682ba;
   cursor: pointer;
   z-index: 2;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   text-decoration: none;
   color: #000;
@@ -205,7 +226,7 @@
   padding: 10px 20px;
   z-index: 1;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   font-family: Corbel;
   color: #000;
   background: #fff;
@@ -375,7 +396,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         <!-- put the guys in this section in one huge div that you style to correspond to the one in that ka thingy  of eventsbrite -->
         
         <div style="">
-          <div style="overflow: visible: font-size: 15px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:50%; margin-left: 1em; margin-top:2em;" >
+          <div style="overflow: visible: font-size: 12px; line-height: 25px; font-weight: 400; box-sizing: border-box; display:inline-block; vertical-align: top; padding-left: 15px; padding-right: 15px; width:50%; margin-left: 1em; margin-top:2em;" >
             
             <%= form_tag(events_path, :method => "get", id: "search-form") do %>
               <%= text_field_tag :search, params[:search], placeholder: '   Search ...',class: "search" %>
@@ -388,36 +409,32 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                 <li class='active'><%= link_to "All", events_path %></li>
                 <li class='active has-sub'><a href='#'><span>Industry</span></a>
                     <ul>
-                      
-
-
                       <li><a href='<%= "#{events_path}?industry=Agric & Forestry" %>'><span>Agric & Forestry</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Assembly" %>'><span>Assembly</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Beauty" %>'><span>Beauty</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Conservation" %>'><span>Conservation</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Construction" %>'><span>Construction</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Creative services" %>'><span>Creative services</span></a></li><!--not sure how it will handle the space. if not just remove the services from the seacrh params-->
+                      <li><a href='<%= "#{events_path}?industry=Creative services" %>'><span>Creative Services</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Education" %>'><span>Education</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Entertainment" %>'><span>Entertainment</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Entrepreneurship" %>'><span>Entrepreneurship</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Financial services" %>'><span>Financial services</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Entrepreneurship" %>'><span>Entrepreneurship</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Financial services" %>'><span>Financial Services</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Gender & Children" %>'><span>Gender & Children</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Governance" %>'><span>Governance</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Healthcare" %>'><span>Healthcare</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Home & Interior" %>'><span>Home & Interior</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Human resources" %>'><span>Human Resources</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=I.C.T" %>'><span>I.C.T</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=I.C.T." %>'><span>I.C.T</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Investment" %>'><span>Investment</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Logistics" %>'><span>Logistics</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Manufacturing" %>'><span>Manufacturing</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Marketing" %>'><span>Marketing</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Media & comms" %>'><span>Media & comms</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Media & Comms" %>'><span>Media & Comms</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Mining" %>'><span>Mining</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Professional services" %>'><span>Professional services</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Sales & marketing" %>'><span>Sales & Marketing</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Professional Services" %>'><span>Professional Services</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Sales & Marketing" %>'><span>Sales & Marketing</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Security" %>'><span>Security</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Social development" %>'><span>Social Development</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Social Development" %>'><span>Social Development</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Sustainability" %>'><span>Sustainability</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Tourism" %>'><span>Tourism</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Trade" %>'><span>Trade</span></a></li>
@@ -451,6 +468,9 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <% end %>
           </div>
         </div>
+        <div class="ad"><p>Advertise Here</p></div>
+        <div class="ad"><p>Advertise Here</p></div>
+        <div class="ad"><p>Advertise Here</p></div>
       </div>
 
       <div class="col-sm-8 text-left features free title-pos"  >
@@ -464,24 +484,24 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                 </li>
             </section>-->
         <% @events.each do |event| %>
-        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:15px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
+        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:12px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
           <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; min-width: 150px; min-height:150px; margin: 0px; padding:0px; clear:both;" >
             <div style=" display: table-cell; vertical-align:middle;">
               <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event, class: "event-image"%></div>
             </div>  
           </div>
           <div style="overflow:hidden; height:150px; padding-right: 30px; padding-left: 30px;"><!-- event details-->
-            <h3 style=" color: #0086bf; font-size:20px; font-family: Corbel; line-height: 30px; font-weight: 40;  margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
-            <p style="margin-bottom:0px; display: block; font-size: 16px; font-family: Corbel; line-height: 25px; color: #180000;">
+            <h3 style=" color: #0086bf; font-size:16px; font-family: Corbel; line-height: 30px; font-weight: 40;  margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
+            <p style="margin-bottom:0px; display: block; font-size: 12px; font-family: Corbel; line-height: 25px; color: #180000;">
              Theme : <span style="text-transform:capitalize; font-family: Corbel; color: #000;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style=" font-family: Corbel; margin-bottom:0px;  display: block; font-size: 16px; line-height: 25px; color: #180000;">
+            <p style=" font-family: Corbel; margin-bottom:0px;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Industry: <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
-            <p style="font-family: Corbel; margin-bottom:0px;  display: block; font-size: 16px; line-height: 25px; color: #180000;">
+            <p style="font-family: Corbel; margin-bottom:0px;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> <!-- To: --><%#= event.date %></span>
             </p>
-            <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 16px; line-height: 25px; color: #180000;">
+            <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>
           </div>
@@ -489,6 +509,10 @@ $('#cssmenu li.has-sub>a').on('click', function(){
         <% end %>
          <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Latest", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
+      <div class="event-text">
+        <%= link_to "List your event", :anchor => "footer" %> for FREE today <br>
+        <span>*Events are subject to changes at short notice. Always check before you go.</span>
+      </div>  
   </div>
 </div>
 
