@@ -46,15 +46,15 @@
       padding-bottom: 1em;
     }
     .new-event{
-      margin-left: 2.9em;
+      margin-left: 4em;
       margin-bottom: 1em;
       color: blue;
       background-color: #ededed;
       border-radius: 4px;
       box-sizing: border-box;
       display:inline-block;
-      font-size: 12px;
-      padding: 0px 10px;
+      font-size: 10px;
+      padding: 0px 7px;
       line-height: 30px;
       height:30px;
       border-left:1px solid #dedede;
@@ -64,7 +64,6 @@
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
-      letter-spacing:0.5px;
       font-family: Corbel;
     }
     .logout{
@@ -74,7 +73,7 @@
       border-radius: 4px;
       box-sizing: border-box;
       display:inline-block;
-      font-size: 12px;
+      font-size: 10px;
       padding: 0px 10px;
       line-height: 30px;
       height:30px;
@@ -85,7 +84,6 @@
       text-transform: uppercase;
       font-weight: 600;
       text-align: center;
-      letter-spacing:0.5px;
       font-family: Corbel;
     }
     .title-pos{
@@ -104,6 +102,19 @@
     .ad>p{
       position: relative;
       top: 50%
+    }
+    .adv{
+      text-align: center;
+      border:thin solid #aed365 ;
+      margin-bottom:5px;
+      width:100%;/* 758px*/
+      height:90px;
+    }
+    .adv>p{
+      position: relative;
+      top:5%;
+      padding-top:1.5em;
+      color:black ;
     }
 
 
@@ -424,7 +435,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <li><a href='<%= "#{events_path}?industry=Healthcare" %>'><span>Healthcare</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Home & Interior" %>'><span>Home & Interior</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Human resources" %>'><span>Human Resources</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=I.C.T." %>'><span>I.C.T</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=I.C.T." %>'><span>I.C.T.</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Investment" %>'><span>Investment</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Logistics" %>'><span>Logistics</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Manufacturing" %>'><span>Manufacturing</span></a></li>
@@ -436,9 +447,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                       <li><a href='<%= "#{events_path}?industry=Security" %>'><span>Security</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Social Development" %>'><span>Social Development</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Sustainability" %>'><span>Sustainability</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Tourism" %>'><span>Tourism</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Trade" %>'><span>Trade</span></a></li>
-                      <li><a href='<%= "#{events_path}?industry=Travel" %>'><span>Travel</span></a></li>
+                      <li><a href='<%= "#{events_path}?industry=Travel & Tourism" %>'><span>Travel & Tourism</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Veterinary" %>'><span>Veterinary</span></a></li>
                       <li><a href='<%= "#{events_path}?industry=Well-being" %>'><span>Well-being</span></a></li>
                     </ul>
@@ -475,6 +485,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 
       <div class="col-sm-8 text-left features free title-pos"  >
         <h2 class=" page-title padded-bottom title-pos "> Events</h2>
+        <div class="adv"><p>Advertise Here</p></div>
         <!--<section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
                 <li href="" style="padding-right: -20px;  color: #666; background-color: #ffe; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
                     date
@@ -507,7 +518,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           </div>
         </div><!-- /event container-->
         <% end %>
-         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Latest", next_label: "Older", inner_window: 1, outer_window: 0, class: "will_paginate"%>
+         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "First", next_label: "Last", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
       <div class="event-text">
         <%= link_to "List your event", :anchor => "footer" %> for FREE today <br>

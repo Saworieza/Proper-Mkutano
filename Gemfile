@@ -7,7 +7,8 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
-gem 'progress_bar'
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 
 
 gem 'favicon_maker_rails'
