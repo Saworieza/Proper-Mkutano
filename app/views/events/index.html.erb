@@ -88,7 +88,7 @@
     }
     .title-pos{
       color:white;
-      font-size: 16px;
+      font-size: 20px;
       margin-top:1em;
       margin-bottom: 0.2em; */
     }
@@ -518,11 +518,12 @@ $('#cssmenu li.has-sub>a').on('click', function(){
           </div>
         </div><!-- /event container-->
         <% end %>
-         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "First", next_label: "Last", inner_window: 1, outer_window: 0, class: "will_paginate"%>
+         <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Prev", next_label: "Next", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
       <div class="event-text">
-        <%= link_to "List your event", :anchor => "footer" %> for FREE today <br>
-        <span>*Events are subject to changes at short notice. Always check before you go.</span>
+         Confused about what event(s) to attend? <%= link_to "We can help!", :anchor => "footer" %> Only we bring you our exclusive deals.<br>
+         <span>Hosting an event? <%= link_to "List HERE!", :anchor => "footer" %> for FREE.</span>
+        <span>*Events are subject to changes at short notice.<br> Always check before you go.</span>
       </div>  
   </div>
 </div>

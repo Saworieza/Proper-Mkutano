@@ -1,4 +1,4 @@
-require 'elasticsearch/model'
+#require 'elasticsearch/model'
 
 class Event < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "150x150>" }, :default_url => "/images/:style/missing.png"
@@ -12,17 +12,22 @@ class Event < ActiveRecord::Base
   belongs_to :industry
 
   #adding elsatic search models
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
+    #include Elasticsearch::Model
+    #include Elasticsearch::Model::Callbacks
 
   #searchable do
     #text :category, :location, :country, :venue, :name, :theme
   #end
 
   #custom search
-  def self.search
-    where("email like ?", "%#{query}")
+  def self.search(search)
+    search_condition = "%" + search + "%"
+    find(:all, :conditions => ['category LIKE ? OR venue LIKE ?', search_condition, search_condition])
   end
+
+  #def self.search
+    #where("email like ?", "%#{query}")
+  #end
 
 
   def Event.find_categories(string)
@@ -35,7 +40,7 @@ class Event < ActiveRecord::Base
 
 
 end
-Article.import # for auto sync model with elastic search
+#Event.import # for auto sync model with elastic search
 #case insensitivity
 
 

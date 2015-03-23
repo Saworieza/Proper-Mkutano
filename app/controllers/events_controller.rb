@@ -49,6 +49,10 @@ class EventsController < ApplicationController
   end
   helper_method :find_country
 
+  def search
+    @eventss = Event.search params[:search]
+  end
+
   # GET /events/new
   def new
     @event = current_user.events.build
