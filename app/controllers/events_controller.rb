@@ -10,14 +10,14 @@ class EventsController < ApplicationController
       @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     elsif params.has_key?("country")
             @events = Event.where(country: params[:country]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
-      elsif
-        @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
       elsif params[:search]
-          @events = Event.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
-      elsif
+        #custom search. no going back to model
+        @events = Event.where("category LIKE ? OR venue LIKE ? OR name LIKE ? OR theme LIKE? OR company LIKE? OR country LIKE? OR location LIKE?",params[:search], params[:search], params[:search], params[:search], params[:search], params[:search], params[:search]).paginate(page: params[:page], per_page: 10)
+          # @events = Event.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+      else
         @events = Event.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
 
-      
+      #search with sunspot
       #@query = Event.search do
           #fulltext params[:search]
       #end
@@ -50,7 +50,7 @@ class EventsController < ApplicationController
   helper_method :find_country
 
   def search
-    @eventss = Event.search params[:search]
+    @events = Event.search params[:search]
   end
 
   # GET /events/new
