@@ -116,6 +116,14 @@
       padding-top:1.5em;
       color:black ;
     }
+    .action-button>a{
+      color:black;
+      padding-left:1em;
+      padding-right:1em;
+      border-radius: 10px,
+      box-shadow: 0px 1px 1px #002;
+      border:thin #aed365;
+    }
 
 
     /* ############################ STYLE FOR THE DROP DOWN ###################################*/
@@ -377,7 +385,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
 <body> 
 <!-- Navbar -->
 <div class="navi navbar-fixed-top" ></div>
-<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:rgba(0,0,0,0.7)">
   <div class="nav-size container nav-container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -390,10 +398,10 @@ $('#cssmenu li.has-sub>a').on('click', function(){
     </div>
     <div class="collapse navbar-collapse text-center" >
           <ul class="ul-nav nav navbar-nav" >
-            <li class="nav-background"><%= link_to "About", homes_path %></li>
+            <li class="nav-background"><%= link_to "About",homes_path ,:anchor => "about" %></li>
             <li class="nav-background"><%= link_to "Events", events_path %></li>
-            <li class="nav-background"><%= link_to "Publications", homes_path %></li>
-            <li class="nav-background"><%= link_to "Contact", :anchor => "footer" %></li>
+            <li class="nav-background"><%= link_to "Newsletter",homes_path, :anchor => "publications" %></li>
+            <li class="nav-background"><%= link_to "Contact",homes_path, :anchor => "contact" %></li>
           </ul>  
     </div>
   </div>
@@ -473,7 +481,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
               </ul>
             </div>
             <% if user_signed_in? %>
-            <%= link_to 'New Event', new_event_path, class: "new-event" %><!-- make an option for this to appear when signed in on the users profile page -->
+            <%= link_to 'New Event', new_event_path, class: "new-event" %>
             <%= link_to('Logout', destroy_user_session_path, class: "logout", :method => :delete) %>
             <% end %>
           </div>
@@ -495,14 +503,23 @@ $('#cssmenu li.has-sub>a').on('click', function(){
                 </li>
             </section>-->
         <% @events.each do |event| %>
-        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:12px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;"><!-- events container-->
+        <!-- events container-->
+        <div style="display:block; text-decoration:none; border:1px solid #f7f7f7; background-color: #fff; box-shadow: 0px 2px 1px #002; font-size:12px; line-height: 25px; font-weight: 400; letter-spacing:0.5px; margin-bottom: 0.5em;">
+          
+          <p style="color:black; margin-left:2em; margin-top:1em;">
+            <% if user_signed_in? %>
+              <button class="action-button"><%= link_to 'Edit', edit_event_path(event), class: "actions" %></button> 
+              <button class="action-button"><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %></button> 
+            <% end %>
+          </p>
+
           <div style="margin-right:0px; float:left; overflow:visible; border-right:1px solid #ededed; text-align:center; display:table; line-height: 0; width: 150px; height: 150px; min-width: 150px; min-height:150px; margin: 0px; padding:0px; clear:both;" >
             <div style=" display: table-cell; vertical-align:middle;">
-              <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event, class: "event-image"%></div>
+              <div style="border: 0px none;"><%= link_to (image_tag event.image.url(:thumb)), event.link, target: "_blank", class: "event-image"%></div>
             </div>  
           </div>
           <div style="overflow:hidden; height:150px; padding-right: 30px; padding-left: 30px;"><!-- event details-->
-            <h3 style=" color: #0086bf; font-size:16px; font-family: Corbel; line-height: 30px; font-weight: 40;  margin-top: 10px; "><%= link_to (event.name), event %></h3><!-- event name-->
+            <h3 style=" color: #0086bf; font-size:16px; font-family: Corbel; line-height: 30px; font-weight: 40;  margin-top: 10px; "><%= link_to (event.name), event.link, target: "_blank" %></h3><!-- event name-->
             <p style="margin-bottom:0px; display: block; font-size: 12px; font-family: Corbel; line-height: 25px; color: #180000;">
              Theme : <span style="text-transform:capitalize; font-family: Corbel; color: #000;"><%= event.theme %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
@@ -515,14 +532,19 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>
+            <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
+             Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.link %></span>
+            </p>
+
+            
           </div>
         </div><!-- /event container-->
         <% end %>
          <%= will_paginate @events, renderer: BootstrapPagination::Rails, previous_label: "Prev", next_label: "Next", inner_window: 1, outer_window: 0, class: "will_paginate"%>
       </div>
       <div class="event-text">
-         Confused about what event(s) to attend? <%= link_to "We can help!", :anchor => "footer" %> Only we bring you our exclusive deals.<br>
-         <span>Hosting an event? <%= link_to "List HERE!", :anchor => "footer" %> for FREE.</span>
+         Confused about what event(s) to attend? <%= link_to "We can help!", homes_path, :anchor => "contact" %> Only we bring you our exclusive deals.<br>
+         <span>Hosting an event? <%= link_to "List HERE!", homes_path, :anchor => "contact" %> for FREE.</span>
         <span>*Events are subject to changes at short notice.<br>  Always check before you go.</span>
       </div>  
   </div>
@@ -533,17 +555,17 @@ $('#cssmenu li.has-sub>a').on('click', function(){
   <div class="container">
     <footer>
       <div class="footer-contact">
-        <p class="footer-m">&copy; Mkutano Business Travel. 2015. Part of The Stawi Group, Kenya  </p>
-        <nav>
+        <p class="footer-m">&copy;  2015. Mkutano Business Travel. Part of The Stawi Group  </p>
+        <!--<nav>
           <ul class="footer-2">
-            <li><%= link_to "About", homes_path %> </li>
+            <li><%= link_to "About", :anchor => "about" %> </li>
             <li><%= link_to "Events", events_path %></li>
-            <li><%= link_to "Publications",homes_path %></li>
+            <li><%= link_to "Publications",:anchor => "publications" %></li>
             <li><%= link_to "Contact ", :anchor => "contact" %></li>
           </ul>
         </nav>
-        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#fff;">Position | Connect | Grow
-        </p>
+        <p class="" style="margin: 0 auto; padding-top: 0.5em; word-spacing: 0.5em; color:#fff;">      Position | Connect | Grow
+        </p>-->
       </div>
     </footer>
   </div>
