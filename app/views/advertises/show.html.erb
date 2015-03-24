@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @advertise.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_advertise_path(@advertise) %> |
+<%= link_to 'Back', advertises_path %>
