@@ -29,19 +29,27 @@
           border-right: none;
         }
         .logo-home{
-          padding-top: 5em;
+          padding-top: ;
           position: relative;
           margin:0 auto;
-          width:80%;
-          left:1.3em;
+          width:63%;
+          
         }
         .home-title{
-          font-size:50px;
+          font-size:30px;
           text-align: center;
           color:#fff;
           margin-left: 0.8em;
           position: relative;
 
+        }
+        .mkutano-container{
+          width:540px;
+          height:280px;
+          background-color: rgba(0,0,0,0.7);
+          position: absolute;
+          left:30%;
+          top: 38%;
         }
         @media only screen and (max-width: 320px) { .home-title{ font-size: 1em; }
 
@@ -53,7 +61,7 @@
 </head>
 <!-- Navbar -->
 <div class="navi navbar-fixed-top" ></div>
-<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class=" navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:rgba(0,0,0,0.7)">
   <div class="nav-size container nav-container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,12 +85,14 @@
 </div>
 <!-- /Navbar -->
 <!-- main content -->
-<div id="landing" class="landing section ">
+<div id="landing" class="landing section " style="margin-top:0;">
     <div class="container text-center">
+      <div class="mkutano-container">
         <%= image_tag("thha.png", alt: "Logo frontpage", class: "logo-home"  )%>
         <p class="home-title">Position | Connect | Grow</p>
         <%#= image_tag("", class: "explore in-app bounce glyphicon glyphicon-chevron-down") %> 
         <!--<a href="index.html#intro" class="explore in-app bounce"><span class="glyphicon glyphicon-chevron-down"></span></a>-->
+      </div>
     </div>
 </div>
 

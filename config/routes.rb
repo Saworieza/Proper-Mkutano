@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ads
+
   devise_for :users
   as :user do
     get "/login" => "devise/sessions#new"
