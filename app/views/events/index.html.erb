@@ -95,7 +95,7 @@
     .ad{
       text-align: center;
       border:thin solid #aed365 ;
-      margin-bottom:5px;
+      margin-bottom:1em;
       width:240;
       height:400px;
     }
@@ -106,7 +106,7 @@
     .adv{
       text-align: center;
       border:thin solid #aed365 ;
-      margin-bottom:5px;
+      margin-bottom:1em;
       width:100%;/* 758px*/
       height:90px;
     }
@@ -528,7 +528,7 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             </p><!-- event organizer and . example Party by Homeboyz-->
             <p style="font-family: Corbel; margin-bottom:0px;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> <!-- To: --><%#= event.date %></span>
-            </p>
+            </p> <%#= select_date Date.today, :prefix => :startdate, :order => [:day, :month, :year] %>
             <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>
