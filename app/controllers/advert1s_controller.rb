@@ -1,6 +1,6 @@
 class Advert1sController < ApplicationController
   before_action :set_advert1, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /advert1s
   # GET /advert1s.json
   def index

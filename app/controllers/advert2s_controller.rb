@@ -1,5 +1,6 @@
 class Advert2sController < ApplicationController
   before_action :set_advert2, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /advert2s
   # GET /advert2s.json

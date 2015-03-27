@@ -1,5 +1,6 @@
 class MainAdsController < ApplicationController
   before_action :set_main_ad, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /main_ads
   # GET /main_ads.json
