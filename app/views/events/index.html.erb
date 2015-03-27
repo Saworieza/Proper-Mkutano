@@ -94,10 +94,10 @@
     }
     .ad{
       text-align: center;
-      border:thin solid #aed365 ;
       margin-bottom:1em;
+      /*border:thin solid #aed365 ;
       width:240;
-      height:400px;
+      height:400px;*/
     }
     .ad>p{
       position: relative;
@@ -108,12 +108,12 @@
       border:thin solid #aed365 ;
       margin-bottom:1em;
       width:100%;/* 758px*/
-      height:90px;
+      max-height:150px;
     }
     .adv>p{
       position: relative;
       top:5%;
-      padding-top:1.5em;
+      padding-top:1%;
       color:black ;
     }
     .action-button>a{
@@ -486,14 +486,74 @@ $('#cssmenu li.has-sub>a').on('click', function(){
             <% end %>
           </div>
         </div>
-        <div class="ad"><p>Advertise Here</p></div>
-        <div class="ad"><p>Advertise Here</p></div>
-        <div class="ad"><p>Advertise Here</p></div>
+        <div class="ad">
+          <p>
+            <% @advert1s.each do |advert1| %>
+              <tr>
+                <% if user_signed_in? %>
+                <button class="action-button"><%= link_to 'Edit', edit_advert1_path(advert1), class: "actions" %></button> 
+                <button class="action-button"><%= link_to 'Delete', advert1, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+                </button> 
+                <% end %>
+              </tr>
+              <tr>
+                <td><%= link_to (image_tag advert1.image.url(:medium)), advert1.link, target: "_blank" %></td>
+              </tr>
+            <% end %>
+          </p>
+        </div>
+        <div class="ad">
+          <p>
+            <% @advert2s.each do |advert2| %>
+              <tr>
+                <% if user_signed_in? %>
+                <button class="action-button"><%= link_to 'Edit', edit_advert2_path(advert2), class: "actions" %></button> 
+                <button class="action-button"><%= link_to 'Delete', advert2, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+                </button> 
+                <% end %>
+              </tr>
+              <tr>
+                <td><%= link_to (image_tag advert2.image.url(:medium)), advert2.link, target: "_blank" %></td>
+              </tr>
+            <% end %>
+          </p>
+        </div>
+        <div class="ad">
+          <p>
+            <% @advert3s.each do |advert3| %>
+              <tr>
+                <% if user_signed_in? %>
+                <button class="action-button"><%= link_to 'Edit', edit_advert3_path(advert3), class: "actions" %></button> 
+                <button class="action-button"><%= link_to 'Delete', advert3, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+                </button> 
+                <% end %>
+              </tr>
+              <tr>
+                <td><%= link_to (image_tag advert3.image.url(:medium)), advert3.link, target: "_blank" %></td>
+              </tr>
+            <% end %>
+          </p>
+        </div>
       </div>
 
       <div class="col-sm-8 text-left features free title-pos"  >
         <h2 class=" page-title padded-bottom title-pos "> Events</h2>
-        <div class="adv"><p>Advertise Here</p></div>
+        <div class="adv">
+          <p>
+            <% @main_ads.each do |main_ad| %>
+              <tr>
+                <% if user_signed_in? %>
+                <button class="action-button"><%= link_to 'Edit', edit_main_ad_path(main_ad), class: "actions" %></button> 
+                <button class="action-button"><%= link_to 'Delete', main_ad, method: :delete, data: { confirm: 'Delete this Event ?' }, class: "actions" %>
+                </button> 
+                <% end %>
+              </tr>
+              <tr>
+                <td><%= link_to (image_tag main_ad.image.url(:large)), main_ad.link, target: "_blank" %></td>
+              </tr>
+            <% end %>
+          </p>
+        </div>
         <!--<section style="text-transform:uppercase; color: #00b6bf; display:block; line-height: 25px; font-weight: 400; text-align-right; letter-spacing: 0.5px; margin-bottom: 1em; ">
                 <li href="" style="padding-right: -20px;  color: #666; background-color: #ffe; border-top-left-radius: 4px; border-bottom-left-radius: 4px; box-sizing: border-box; display:inline-block; font-size: 12px; padding: 0px 20px; line-height: 30px; height:30px; border-left: 1px solid #dedede; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; text-decoration:none; text-transform: uppercase; font-weight: 400; text-align: right; letter-spacing:0.5px;">
                     date
@@ -527,8 +587,8 @@ $('#cssmenu li.has-sub>a').on('click', function(){
              Industry: <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.category %></span>
             </p><!-- event organizer and . example Party by Homeboyz-->
             <p style="font-family: Corbel; margin-bottom:0px;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
-             Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date %> <!-- To: --><%#= event.date %></span>
-            </p> <%#= select_date Date.today, :prefix => :startdate, :order => [:day, :month, :year] %>
+             Dates : <span style="text-transform:capitalize; color: #000;"><%= event.date.strftime('%d-%b-%Y') %> <!-- To: --><%#= event.date %></span>
+            </p>
             <p style="font-family: Corbel; margin-bottom:1em;  display: block; font-size: 12px; line-height: 25px; color: #180000;">
              Venue : <span style="font-family: Corbel; text-transform:capitalize; color: #000;"><%= event.venue %>,  <%= event.location %>,  <%= event.country %></span>
             </p>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Main Ads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @main_ads.each do |main_ad| %>
+      <tr>
+        <td><%= image_tag main_ad.image.url(:medium) %></td>
+      </tr>
+    <% end %>
+    
+    <% @advert1s.each do |advert1| %>
+      <tr>
+        <td><%= image_tag advert1.image.url(:medium) %></td>
+      </tr>
+    <% end %>
+
+    <% @advert2s.each do |advert2| %>
+      <tr>
+        <td><%= image_tag advert2.image.url(:medium) %></td>
+      </tr>
+    <% end %>
+
+    <% @advert3s.each do |advert3| %>
+      <tr>
+        <td><%= image_tag advert3.image.url(:medium) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Main ad', new_main_ad_path %>

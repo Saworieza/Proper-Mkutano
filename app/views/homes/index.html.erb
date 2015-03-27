@@ -23,13 +23,28 @@
           font-family: Corbel;
         }
         .pub-left-t{
+          max-width: 400px;
+          overflow: hidden;
           font-size: 12px;
           text-align: right;
           font-family: Corbel;
           border-right: none;
         }
+        .pub-right-t{
+          color:transparent;
+          max-width: 400px;
+          overflow: hidden;
+          font-size: 12px;
+          text-align: left;
+          font-family: Corbel;
+          border-right: none;
+        }
+        .pub-right-t>a{
+          color:transparent;
+        }
+
         .logo-home{
-          padding-top:0.5em;
+          padding-top:0.5ems;
           position: relative;
           margin:0 auto;
           width:63%;
@@ -149,19 +164,19 @@
     <p class="pub-text">
       Keep up with the latest goings-on in your industry.</br> Sign up today:
     </p>
+      <!-- Begin MailChimp Signup Form -->
 
-   <!--End mc_embed_signup-->
- <!-- new sign up form for mail chimp-->
     <div id="mc_embed_signup_scroll" style="margin-bottom: 1em;">
-      <form id="searchbox" action="//mkutanotravel.us10.list-manage.com/subscribe/post?u=a15192d07e7f3fd4cbde264bd&amp;id=848edcd585" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <input id="mce-EMAIL" type="email" placeholder="Enter Your Email" class="required email pub-text" style="color:black; text-align:center;" style="border-radius: 10px 0px 0px 10px;">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <form action="//mkutanotravel.us10.list-manage.com/subscribe/post?u=a15192d07e7f3fd4cbde264bd&amp;id=848edcd585" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+  
+          <input type="email" value="" name="EMAIL" class="required email pub-text" id="mce-EMAIL" placeholder="  email address" required>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;">
             <input type="text" name="b_a15192d07e7f3fd4cbde264bd_848edcd585" tabindex="-1" value="">
           </div>
-        <input id="mc-embedded-subscribe" type="submit" value="Subscribe"name="subscribe" class="pub-text"style="background-color: #aed365; border: 2px solid #aed365; border-radius: 5px; padding:2px;" >
+          <input type="submit" value="Subscribe" name="subscribe" class="pub-text"style="background-color: #aed365; border: 2px solid #aed365; border-radius: 5px;" >
+        </div>
       </form>
     </div>
 
@@ -175,67 +190,87 @@
         </thead>
         <tbody>
           <tr >
+            <td class="pub-left-t about-text" >
+              <script language="javascript" src="http://us10.campaign-archive1.com/generate-js/?u=a15192d07e7f3fd4cbde264bd&fid=1253&show=10" type="text/javascript">
+              </script>
+            </td>
+            <td class="pub-right-t about-text">
+              <a href="">Nothing hereNothing hereNothing here</a>
+              </script>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--<table class="table table-hover">
+        <thead>
+          <tr>
+            <td class="pub-title left-title">Newsletters</td>
+            <td class="pub-title right-title">Publications</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
             <td class="pub-left-t about-text" ><%= link_to "March 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text"></td>-->
+            <!--<td class="right-t about-text"></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "April 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "May 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "June 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "July 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "August 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "September 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "October 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "November 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
           <tr>
             <td class="pub-left-t about-text" ><%= link_to "December 2015", "http://us10.campaign-archive1.com/?u=a15192d07e7f3fd4cbde264bd&id=1e9f263c2c", class: "pub-text", target: "_blank" %></p>
               <p class="icon-li pub-text">
             </td>
-            <!--<td class="right-t about-text" ></td>-->
+            <!--<td class="right-t about-text" ></td>--
           </tr>
         </tbody>
-      </table>
+      </table>-->
       </div>
   </div>
     </div>
@@ -251,8 +286,8 @@
             <div class="footer-cont">
             <p class="foot-contact span">e : <a href="mailto:hello@mkutanotravel.com">hello@mkutanotravel.com</a></p>
             <p class="foot-contact span">t : <a href="" target="_blank"> +254 717 164 504</a></p>
-            <p class="foot-contact span">f : <a href="https://www.facebook.com/pages/Mkutano-Business-Travel/1649182765308583?fref=ts" target="_blank">Mkutano Business Travel</a></p>
-            <p class="foot-contact span">t : <a href="https://twitter.com/?lang=en" target="_blank">@mkutanotravel</a></p>
+            <p class="foot-contact span">f : <a href="https://www.facebook.com/mkutanotravel" target="_blank">Mkutano Business Travel</a></p>
+            <p class="foot-contact span">t : <a href="https://twitter.com/mkutanotravel" target="_blank">@mkutanotravel</a></p>
             <p class="foot-contact span">a : <a href=""> P.O. Box 69561-00400, Nairobi, Kenya</a></p>
           </div>
         </div>
@@ -283,9 +318,6 @@
 
 
 <!-- *************** AREA 51 ********************-->
-
-
-
 
 </body>
 </html>

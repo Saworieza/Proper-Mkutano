@@ -5,6 +5,12 @@ class EventsController < ApplicationController
   # GET /events.json
 
   def index
+    @main_ads = MainAd.all
+
+    @advert1s = Advert1.order('created_at DESC').limit(1) 
+    @advert2s = Advert2.order('created_at DESC').limit(1) 
+    @advert3s = Advert3.order('created_at DESC').limit(1) 
+    
     if params.has_key?("industry")
       @events = Event.where(category: params[:industry]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     elsif params.has_key?("country")

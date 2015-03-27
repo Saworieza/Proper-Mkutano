@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :advertises
+ 
+
+  resources :main_ads
+
+  resources :advert3s
+
+  resources :advert2s
+
+  resources :advert1s
 
   devise_for :users
   as :user do

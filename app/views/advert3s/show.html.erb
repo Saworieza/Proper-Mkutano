@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= link_to (image_tag @advert3.image.url(:medium)), @advert3.link, target: "_blank" %>
+</p>
+
+<!--<p>
+  <strong>Link:</strong>
+  <%= @advert3.link %>
+</p>-->
+
+<%= link_to 'Edit', edit_advert3_path(@advert3) %> |
+<%= link_to 'Back', advert3s_path %>

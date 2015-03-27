@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Advert1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @advert1s.each do |advert1| %>
+      <tr>
+        <td><%= link_to (image_tag advert1.image.url(:medium)), advert1.link, target: "_blank" %></td>
+        <td><%= advert1.link %></td>
+        <td><%= link_to 'Show', advert1 %></td>
+        <td><%= link_to 'Edit', edit_advert1_path(advert1) %></td>
+        <td><%= link_to 'Destroy', advert1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Advert1', new_advert1_path %>
